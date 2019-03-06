@@ -1,0 +1,5 @@
+0:0:0:0:0:0:0:1 - - [05/Mar/2019:12:01:56 +0300] "GET /shop HTTP/1.1" 302 - http-bio-8082-exec-2 0
+0:0:0:0:0:0:0:1 - - [05/Mar/2019:12:01:59 +0300] "GET /shop/ HTTP/1.1" 200 216 http-bio-8082-exec-3 2952
+0:0:0:0:0:0:0:1 - - [05/Mar/2019:12:01:59 +0300] "GET /favicon.ico HTTP/1.1" 404 - http-bio-8082-exec-4 0
+0:0:0:0:0:0:0:1 - - [05/Mar/2019:12:02:03 +0300] "GET /shop/login HTTP/1.1" 200 76 http-bio-8082-exec-5 65
+0:0:0:0:0:0:0:1 - - [05/Mar/2019:12:02:06 +0300] "GET /shop/registration HTTP/1.1" 200 83 http-bio-8082-exec-6 52

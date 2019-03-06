@@ -1,5 +1,7 @@
-by\krot\mvc\services\UserService.class
 by\krot\mvc\dao\UserDao.class
+by\krot\mvc\dao\UserDaoImpl.class
+by\krot\mvc\services\UserService.class
+by\krot\mvc\config\SpringConfig.class
 by\krot\mvc\entity\User.class
 by\krot\mvc\config\AppConfig.class
 by\krot\mvc\controllers\UserController.class

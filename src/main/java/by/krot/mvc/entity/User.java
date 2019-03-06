@@ -10,12 +10,11 @@ public class User {
     private String lastname;
     private String email;
     private String address;
-    private int phone;
 
     public User() {
     }
 
-    public User(String id, String username, String password, String firstname, String lastname, String email, String address, int phone) {
+    public User(String id, String username, String password, String firstname, String lastname, String email, String address) {
         this.id = id;
         this.username = username;
         this.password = password;
@@ -23,7 +22,6 @@ public class User {
         this.lastname = lastname;
         this.email = email;
         this.address = address;
-        this.phone = phone;
     }
 
     public String getId() {
@@ -82,21 +80,13 @@ public class User {
         this.address = address;
     }
 
-    public int getPhone() {
-        return phone;
-    }
-
-    public void setPhone(int phone) {
-        this.phone = phone;
-    }
 
     @Override
     public boolean equals(Object o) {
         if (this == o) return true;
         if (o == null || getClass() != o.getClass()) return false;
         User user = (User) o;
-        return phone == user.phone &&
-                Objects.equals(username, user.username) &&
+        return Objects.equals(username, user.username) &&
                 Objects.equals(password, user.password) &&
                 Objects.equals(firstname, user.firstname) &&
                 Objects.equals(lastname, user.lastname) &&
@@ -106,7 +96,7 @@ public class User {
 
     @Override
     public int hashCode() {
-        return Objects.hash(username, password, firstname, lastname, email, address, phone);
+        return Objects.hash(username, password, firstname, lastname, email, address);
     }
 
     @Override
@@ -118,7 +108,6 @@ public class User {
                 ", lastname='" + lastname + '\'' +
                 ", email='" + email + '\'' +
                 ", address='" + address + '\'' +
-                ", phone=" + phone +
                 '}';
     }
 }
