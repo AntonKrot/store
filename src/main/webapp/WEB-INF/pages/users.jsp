@@ -9,6 +9,7 @@
 <table>
     <thead>
     <tr>
+        <th>id</th>
         <th>firstname</th>
         <th>lastname</th>
         <th>email</th>
@@ -16,14 +17,15 @@
     </tr>
     </thead>
     <tbody>
-    <tr>
-        <:c:forEach var="list" items="${users}">
+    <c:forEach var="list" items="${users}">
+        <tr>
+            <td><a href="user/${list.id}"}>${list.id}</a></td>
             <td>${list.firstname}</td>
             <td>${list.lastname}</td>
             <td>${list.email}</td>
             <td>${list.address}</td>
-        </:c:forEach>
-    </tr>
+        </tr>
+    </c:forEach>
     </tbody>
 </table>
 

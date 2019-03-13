@@ -10,6 +10,8 @@ public class User {
     private String lastname;
     private String email;
     private String address;
+    private String phone;
+
 
     public User() {
     }
@@ -22,6 +24,14 @@ public class User {
         this.lastname = lastname;
         this.email = email;
         this.address = address;
+    }
+
+    public String getPhone() {
+        return phone;
+    }
+
+    public void setPhone(String phone) {
+        this.phone = phone;
     }
 
     public String getId() {

@@ -4,4 +4,5 @@
 
 <body>
 <h1>login</h1>
+<a href="users">Users list</a>
 </body>

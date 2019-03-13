@@ -1,4 +1,4 @@
-package by.krot.mvc.services;
+package by.krot.mvc.service;
 
 import by.krot.mvc.entity.User;
 
@@ -8,13 +8,13 @@ public interface UserService {
 
     User findById(String id);
 
-    User findByName(String name);
+    User findByName(String username);
 
     void saveUser(User user);
 
     void updateUser(User user);
 
-    void deleteUserBuId(String id);
+    void deleteById(String id);
 
     List<User> findAll();
 
