@@ -2,6 +2,7 @@ package by.krot.mvc.controllers;
 
 import by.krot.mvc.services.UserService;
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.beans.factory.annotation.Qualifier;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.RequestMapping;
@@ -11,7 +12,9 @@ import org.springframework.web.bind.annotation.RequestMethod;
 
 public class UserController {
 
+
     @Autowired
+    @Qualifier("getUserService")
     public UserService userService;
 
     @RequestMapping(value = "/", method = RequestMethod.GET)
@@ -29,10 +32,10 @@ public class UserController {
         return "registration";
     }
 
-    @RequestMapping(value = "/users", method = RequestMethod.GET)
+    @RequestMapping(value = "users", method = RequestMethod.GET)
     public String getAllUsers(Model model) {
         model.addAttribute("users", userService.findAll());
-        return "usersList";
+        return "users";
     }
 
 

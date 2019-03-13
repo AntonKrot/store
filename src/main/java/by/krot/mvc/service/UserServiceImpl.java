@@ -1,11 +1,14 @@
 package by.krot.mvc.services;
 
 import by.krot.mvc.dao.UserDao;
+import by.krot.mvc.dao.UserDaoImpl;
 import by.krot.mvc.entity.User;
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.stereotype.Service;
 
 import java.util.List;
 
+@Service
 public class UserServiceImpl implements UserService {
 
     @Autowired
@@ -38,7 +41,7 @@ public class UserServiceImpl implements UserService {
 
     @Override
     public List<User> findAll() {
-        return UserDao.findAll();
+        return userDao.findAll();
     }
 
     @Override
