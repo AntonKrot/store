@@ -19,15 +19,17 @@
     <tbody>
     <c:forEach var="list" items="${users}">
         <tr>
-            <td><a href="user/${list.id}"}>${list.id}</a></td>
+            <td><a href="user/${list.id}" }>${list.id}</a></td>
             <td>${list.firstname}</td>
             <td>${list.lastname}</td>
             <td>${list.email}</td>
             <td>${list.address}</td>
+            <td><a href="delete/${list.id}">delete</a></td>
+            <td><a href="updateUser/${list.id}">update</a></td>
         </tr>
     </c:forEach>
     </tbody>
 </table>
-
+<a href="/shop/addUser" >Create new user</a>
 </body>
 </html>

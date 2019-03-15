@@ -36,10 +36,9 @@ public class UserDaoImpl implements UserDao {
         return jdbcTemplate.queryForObject(sql, new UserMapper(), id);
     }
 
-
     @Override
     public void deleteById(String id) {
-        String sql = "DELETE * FROM user WHERE iduser=?";
+        String sql = "DELETE FROM user WHERE iduser=?";
         jdbcTemplate.update(sql, id);
     }
 
