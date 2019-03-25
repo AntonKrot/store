@@ -1,25 +1,17 @@
 package by.krot.mvc.service;
 
-import by.krot.mvc.entity.User;
+import by.krot.mvc.model.User;
 
-import java.util.List;
-
+/**
+ * Service class for{@link User}
+ *
+ * @author Anton Krot
+ * @version 1.0
+ */
 public interface UserService {
 
-    User findById(String id);
+    void save(User user);
 
-    User findByName(String username);
-
-    void saveUser(User user);
-
-    void updateUser(User user);
-
-    void deleteById(String id);
-
-    List<User> findAll();
-
-    void deleteAllUsers();
-
-    boolean isUserExist(User user);
+    User findByUsername(String Username);
 
 }

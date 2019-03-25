@@ -1,25 +1,12 @@
 package by.krot.mvc.dao;
 
-import by.krot.mvc.entity.User;
+import by.krot.mvc.model.User;
+import org.springframework.data.jpa.repository.JpaRepository;
 
 import java.util.List;
 
-public interface UserDao {
+public interface UserDao extends JpaRepository<User, Long> {
 
-    User findById(String id);
-
-    User findByName(String username);
-
-    void saveUser(User user);
-
-    void updateUser(User user);
-
-    void deleteById(String id);
-
-    List<User> findAll();
-
-    void deleteAllUsers();
-
-    boolean isUserExist(User user);
+    User findByUsername(String username);
 
 }
