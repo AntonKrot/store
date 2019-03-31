@@ -1,11 +1,15 @@
 by\krot\mvc\controller\UserController.class
+by\krot\mvc\model\Product.class
 by\krot\mvc\service\impl\UserDetailsServiceImpl.class
 by\krot\mvc\model\Role.class
 by\krot\mvc\service\UserService.class
+by\krot\mvc\model\Category.class
 by\krot\mvc\service\impl\SecurityServiceImpl.class
+by\krot\mvc\model\Producer.class
 by\krot\mvc\dao\RoleDao.class
 by\krot\mvc\service\impl\UserServiceImpl.class
 by\krot\mvc\dao\UserDao.class
 by\krot\mvc\validator\UserValidator.class
 by\krot\mvc\model\User.class
 by\krot\mvc\service\SecurityService.class
+by\krot\mvc\model\Order.class

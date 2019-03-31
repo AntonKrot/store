@@ -18,7 +18,7 @@ import static javax.persistence.GenerationType.AUTO;
 public class User {
     @Id
     @GeneratedValue(strategy = AUTO)
-    private String id;
+    private Long id;
     @Column(name = "username")
     private String username;
     @Column(name = "password")
@@ -35,16 +35,20 @@ public class User {
     private String phone;
     @Transient
     private String confirmPassword;
+    @Transient
+    private String oldPassword;
     @ManyToMany
     @JoinTable(name = "user_roles", joinColumns = @JoinColumn(name = "user_id"),
             inverseJoinColumns = @JoinColumn(name = "role_id"))
     private Set<Role> roles;
+//    @OneToMany
+//    private Set<Order> orders = new HashSet<>();
 
 
     public User() {
     }
 
-    public User(String id, String username, String password, String firstname, String lastname, String email, String address) {
+    public User(Long id, String username, String password, String firstname, String lastname, String email, String address) {
         this.id = id;
         this.username = username;
         this.password = password;
@@ -52,6 +56,23 @@ public class User {
         this.lastname = lastname;
         this.email = email;
         this.address = address;
+    }
+
+//    public Set<Order> getOrders() {
+//        return orders;
+//    }
+//
+//    public void setOrders(Set<Order> orders) {
+//        this.orders = orders;
+//    }
+
+
+    public String getOldPassword() {
+        return oldPassword;
+    }
+
+    public void setOldPassword(String oldPassword) {
+        this.oldPassword = oldPassword;
     }
 
     public String getConfirmPassword() {
@@ -78,11 +99,11 @@ public class User {
         this.phone = phone;
     }
 
-    public String getId() {
+    public Long getId() {
         return id;
     }
 
-    public void setId(String id) {
+    public void setId(Long id) {
         this.id = id;
     }
 

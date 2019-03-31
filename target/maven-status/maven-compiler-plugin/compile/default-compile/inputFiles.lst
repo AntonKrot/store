@@ -1,12 +1,15 @@
-D:\Projects\store\src\main\java\by\krot\mvc\service\impl\SecurityServiceImpl.java
-D:\Projects\store\src\main\java\by\krot\mvc\validator\UserValidator.java
-D:\Projects\store\src\main\java\by\krot\mvc\model\Role.java
-D:\Projects\store\src\main\java\by\krot\mvc\model\User.java
-D:\Projects\store\src\main\java\by\krot\mvc\service\UserService.java
-D:\Projects\store\src\main\java\by\krot\mvc\controller\UserController.java
-D:\Projects\store\src\main\java\by\krot\mvc\service\SecurityService.java
-D:\Projects\store\src\main\java\by\krot\mvc\dao\UserDao.java
-D:\Projects\store\src\main\java\by\krot\mvc\dao\RoleDao.java
-D:\Projects\store\src\main\java\by\krot\mvc\utils\HibernateUtil.java
-D:\Projects\store\src\main\java\by\krot\mvc\service\impl\UserDetailsServiceImpl.java
-D:\Projects\store\src\main\java\by\krot\mvc\service\impl\UserServiceImpl.java
+D:\Projects\Новая папка\store\src\main\java\by\krot\mvc\model\User.java
+D:\Projects\Новая папка\store\src\main\java\by\krot\mvc\service\impl\UserDetailsServiceImpl.java
+D:\Projects\Новая папка\store\src\main\java\by\krot\mvc\service\UserService.java
+D:\Projects\Новая папка\store\src\main\java\by\krot\mvc\model\Product.java
+D:\Projects\Новая папка\store\src\main\java\by\krot\mvc\model\Producer.java
+D:\Projects\Новая папка\store\src\main\java\by\krot\mvc\dao\UserDao.java
+D:\Projects\Новая папка\store\src\main\java\by\krot\mvc\model\Role.java
+D:\Projects\Новая папка\store\src\main\java\by\krot\mvc\model\Order.java
+D:\Projects\Новая папка\store\src\main\java\by\krot\mvc\controller\UserController.java
+D:\Projects\Новая папка\store\src\main\java\by\krot\mvc\dao\RoleDao.java
+D:\Projects\Новая папка\store\src\main\java\by\krot\mvc\model\Category.java
+D:\Projects\Новая папка\store\src\main\java\by\krot\mvc\validator\UserValidator.java
+D:\Projects\Новая папка\store\src\main\java\by\krot\mvc\service\impl\SecurityServiceImpl.java
+D:\Projects\Новая папка\store\src\main\java\by\krot\mvc\service\impl\UserServiceImpl.java
+D:\Projects\Новая папка\store\src\main\java\by\krot\mvc\service\SecurityService.java

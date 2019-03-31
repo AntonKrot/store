@@ -10,6 +10,7 @@ import org.springframework.security.crypto.bcrypt.BCryptPasswordEncoder;
 import org.springframework.stereotype.Service;
 
 import java.util.HashSet;
+import java.util.List;
 import java.util.Set;
 
 /**
@@ -43,4 +44,38 @@ public class UserServiceImpl implements UserService {
     public User findByUsername(String username) {
         return userDao.findByUsername(username);
     }
+
+    @Override
+    public List<User> findAllUsers() {
+        return userDao.findAll();
+    }
+
+    @Override
+    public void deleteUser(Long id) {
+        userDao.delete(id);
+    }
+
+    @Override
+    public User findById(Long id) {
+        User user = userDao.findOne(id);
+        return user;
+    }
+
+    @Override
+    public void updateUser(User user) {
+        user.setPassword(bCryptPasswordEncoder.encode(user.getPassword()));
+        Set<Role> roles = new HashSet<>();
+        user.setRoles(roles);
+        userDao.save(user);
+    }
+
+    @Override
+    public void giveAdminRole(User user) {
+        Set<Role> roles = new HashSet<>();
+        roles.add(roleDao.getOne(2L));
+        roles.add(roleDao.getOne(1L));
+        user.setRoles(roles);
+        userDao.save(user);
+    }
+
 }
