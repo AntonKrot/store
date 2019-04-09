@@ -2,71 +2,39 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="c53ad71f-d721-4ece-8655-dbc0a3855255" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/src/main/java/by/krot/mvc/controller/ProductController.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/by/krot/mvc/dao/CategoryDao.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/by/krot/mvc/dao/ProducerDao.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/by/krot/mvc/dao/StatusDao.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/by/krot/mvc/dao/impl/OrderDaoImpl.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/by/krot/mvc/model/Status.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/by/krot/mvc/service/CategoryService.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/by/krot/mvc/service/OrderService.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/by/krot/mvc/service/ProducerService.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/by/krot/mvc/service/ProductService.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/by/krot/mvc/service/StatusService.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/by/krot/mvc/service/impl/CategoryServiceImpl.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/by/krot/mvc/service/impl/OrderServiceImpl.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/by/krot/mvc/service/impl/ProducerServiceImpl.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/by/krot/mvc/service/impl/ProductServiceImpl.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/by/krot/mvc/service/impl/StatusServiceImpl.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/webapp/WEB-INF/views/addCategory.jsp" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/webapp/WEB-INF/views/addProduct.jsp" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/webapp/WEB-INF/views/showBasket.jsp" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/webapp/WEB-INF/views/showNullBasket.jsp" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/webapp/WEB-INF/views/showNullOrders.jsp" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/webapp/WEB-INF/views/showOrders.jsp" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/webapp/WEB-INF/views/showProducts.jsp" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/by/krot/mvc/controller/BasketController.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/webapp/WEB-INF/views/.jsp" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/dataSources/3baa6946-7837-4e52-baaa-bc5beb8d2d4a.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/dataSources/3baa6946-7837-4e52-baaa-bc5beb8d2d4a.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/by/krot/mvc/controller/UserController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/by/krot/mvc/controller/UserController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/by/krot/mvc/dao/OrderDao.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/by/krot/mvc/dao/OrderDao.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/by/krot/mvc/dao/ProductDao.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/by/krot/mvc/dao/ProductDao.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/by/krot/mvc/model/Category.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/by/krot/mvc/model/Category.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/by/krot/mvc/ClientCode.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/by/krot/mvc/ClientCode.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/by/krot/mvc/controller/ProductController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/by/krot/mvc/controller/ProductController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/by/krot/mvc/dao/impl/OrderDaoImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/by/krot/mvc/dao/impl/OrderDaoImpl.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/by/krot/mvc/model/Order.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/by/krot/mvc/model/Order.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/by/krot/mvc/model/Producer.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/by/krot/mvc/model/Producer.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/by/krot/mvc/model/Product.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/by/krot/mvc/model/Product.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/by/krot/mvc/model/User.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/by/krot/mvc/model/User.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/by/krot/mvc/service/SecurityService.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/by/krot/mvc/service/SecurityService.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/by/krot/mvc/service/impl/SecurityServiceImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/by/krot/mvc/service/impl/SecurityServiceImpl.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/by/krot/mvc/service/impl/UserServiceImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/by/krot/mvc/service/impl/UserServiceImpl.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/resources/database.sql" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/database.sql" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/webapp/WEB-INF/appconfig-data.xml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/WEB-INF/appconfig-data.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/webapp/WEB-INF/views/addCategory.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/WEB-INF/views/addCategory.jsp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/webapp/WEB-INF/views/addProduct.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/WEB-INF/views/addProduct.jsp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/webapp/WEB-INF/views/admin.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/WEB-INF/views/admin.jsp" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/webapp/WEB-INF/views/editUser.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/WEB-INF/views/editUser.jsp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/webapp/WEB-INF/views/login.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/WEB-INF/views/login.jsp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/webapp/WEB-INF/views/registration.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/WEB-INF/views/registration.jsp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/webapp/WEB-INF/views/showBasket.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/WEB-INF/views/showBasket.jsp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/webapp/WEB-INF/views/showNullBasket.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/WEB-INF/views/showNullBasket.jsp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/webapp/WEB-INF/views/showNullOrders.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/WEB-INF/views/showNullOrders.jsp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/webapp/WEB-INF/views/showOrders.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/WEB-INF/views/showOrders.jsp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/webapp/WEB-INF/views/showProducts.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/WEB-INF/views/showProducts.jsp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/webapp/WEB-INF/views/showUsers.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/WEB-INF/views/showUsers.jsp" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/webapp/WEB-INF/views/welcome.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/WEB-INF/views/welcome.jsp" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/webapp/resources/js/bootstrap.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/resources/js/bootstrap.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/META-INF/store.kotlin_module" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/by/krot/mvc/controller/UserController.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/by/krot/mvc/controller/UserController.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/by/krot/mvc/model/User.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/by/krot/mvc/model/User.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/by/krot/mvc/service/SecurityService.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/by/krot/mvc/service/SecurityService.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/by/krot/mvc/service/impl/SecurityServiceImpl.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/by/krot/mvc/service/impl/SecurityServiceImpl.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/by/krot/mvc/service/impl/UserServiceImpl.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/by/krot/mvc/service/impl/UserServiceImpl.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/database.sql" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/database.sql" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/maven-archiver/pom.properties" beforeDir="false" afterPath="$PROJECT_DIR$/target/maven-archiver/pom.properties" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/maven-status/maven-compiler-plugin/compile/default-compile/createdFiles.lst" beforeDir="false" afterPath="$PROJECT_DIR$/target/maven-status/maven-compiler-plugin/compile/default-compile/createdFiles.lst" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/maven-status/maven-compiler-plugin/compile/default-compile/inputFiles.lst" beforeDir="false" afterPath="$PROJECT_DIR$/target/maven-status/maven-compiler-plugin/compile/default-compile/inputFiles.lst" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/store.war" beforeDir="false" afterPath="$PROJECT_DIR$/target/store.war" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/store/WEB-INF/appconfig-data.xml" beforeDir="false" afterPath="$PROJECT_DIR$/target/store/WEB-INF/appconfig-data.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/store/WEB-INF/appconfig-security.xml" beforeDir="false" afterPath="$PROJECT_DIR$/target/store/WEB-INF/appconfig-security.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/store/WEB-INF/classes/by/krot/mvc/controller/UserController.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/store/WEB-INF/classes/by/krot/mvc/controller/UserController.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/store/WEB-INF/classes/by/krot/mvc/service/UserService.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/store/WEB-INF/classes/by/krot/mvc/service/UserService.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/store/WEB-INF/views/editUser.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/target/store/WEB-INF/views/editUser.jsp" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/store/WEB-INF/views/login.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/target/store/WEB-INF/views/login.jsp" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/store/WEB-INF/views/registration.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/target/store/WEB-INF/views/registration.jsp" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/store/WEB-INF/views/showUsers.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/target/store/WEB-INF/views/showUsers.jsp" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/store/WEB-INF/views/welcome.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/target/store/WEB-INF/views/welcome.jsp" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/store/resources/css/bootstrap.min.css" beforeDir="false" afterPath="$PROJECT_DIR$/target/store/resources/css/bootstrap.min.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/store/resources/js/bootstrap.min.js" beforeDir="false" afterPath="$PROJECT_DIR$/target/store/resources/js/bootstrap.min.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/tomcat/logs/access_log.2019-03-31" beforeDir="false" afterPath="$PROJECT_DIR$/target/tomcat/logs/access_log.2019-03-31" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/tomcat/work/Tomcat/localhost/shop/org/apache/jsp/WEB_002dINF/views/addCategory_jsp.java" beforeDir="false" afterPath="$PROJECT_DIR$/target/tomcat/work/Tomcat/localhost/shop/org/apache/jsp/WEB_002dINF/views/addCategory_jsp.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/tomcat/work/Tomcat/localhost/shop/org/apache/jsp/WEB_002dINF/views/addProduct_jsp.java" beforeDir="false" afterPath="$PROJECT_DIR$/target/tomcat/work/Tomcat/localhost/shop/org/apache/jsp/WEB_002dINF/views/addProduct_jsp.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/target/tomcat/work/Tomcat/localhost/shop/org/apache/jsp/WEB_002dINF/views/editUser_jsp.java" beforeDir="false" afterPath="$PROJECT_DIR$/target/tomcat/work/Tomcat/localhost/shop/org/apache/jsp/WEB_002dINF/views/editUser_jsp.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/tomcat/work/Tomcat/localhost/shop/org/apache/jsp/WEB_002dINF/views/login_jsp.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/tomcat/work/Tomcat/localhost/shop/org/apache/jsp/WEB_002dINF/views/login_jsp.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/tomcat/work/Tomcat/localhost/shop/org/apache/jsp/WEB_002dINF/views/login_jsp.java" beforeDir="false" afterPath="$PROJECT_DIR$/target/tomcat/work/Tomcat/localhost/shop/org/apache/jsp/WEB_002dINF/views/login_jsp.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/tomcat/work/Tomcat/localhost/shop/org/apache/jsp/WEB_002dINF/views/registration_jsp.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/tomcat/work/Tomcat/localhost/shop/org/apache/jsp/WEB_002dINF/views/registration_jsp.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/tomcat/work/Tomcat/localhost/shop/org/apache/jsp/WEB_002dINF/views/registration_jsp.java" beforeDir="false" afterPath="$PROJECT_DIR$/target/tomcat/work/Tomcat/localhost/shop/org/apache/jsp/WEB_002dINF/views/registration_jsp.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/tomcat/work/Tomcat/localhost/shop/org/apache/jsp/WEB_002dINF/views/showNullBasket_jsp.java" beforeDir="false" afterPath="$PROJECT_DIR$/target/tomcat/work/Tomcat/localhost/shop/org/apache/jsp/WEB_002dINF/views/showNullBasket_jsp.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/tomcat/work/Tomcat/localhost/shop/org/apache/jsp/WEB_002dINF/views/showNullOrders_jsp.java" beforeDir="false" afterPath="$PROJECT_DIR$/target/tomcat/work/Tomcat/localhost/shop/org/apache/jsp/WEB_002dINF/views/showNullOrders_jsp.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/tomcat/work/Tomcat/localhost/shop/org/apache/jsp/WEB_002dINF/views/showProducts_jsp.java" beforeDir="false" afterPath="$PROJECT_DIR$/target/tomcat/work/Tomcat/localhost/shop/org/apache/jsp/WEB_002dINF/views/showProducts_jsp.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/target/tomcat/work/Tomcat/localhost/shop/org/apache/jsp/WEB_002dINF/views/showUsers_jsp.java" beforeDir="false" afterPath="$PROJECT_DIR$/target/tomcat/work/Tomcat/localhost/shop/org/apache/jsp/WEB_002dINF/views/showUsers_jsp.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/target/tomcat/work/Tomcat/localhost/shop/org/apache/jsp/WEB_002dINF/views/welcome_jsp.java" beforeDir="false" afterPath="$PROJECT_DIR$/target/tomcat/work/Tomcat/localhost/shop/org/apache/jsp/WEB_002dINF/views/welcome_jsp.java" afterDir="false" />
     </list>
@@ -115,104 +83,17 @@
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="375">
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/main/java/by/krot/mvc/controller/ProductController.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="-217">
-              <caret line="157" column="34" selection-start-line="157" selection-start-column="34" selection-end-line="157" selection-end-column="34" />
-              <folding>
-                <element signature="imports" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
       <file pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/src/main/webapp/WEB-INF/views/showNullOrders.jsp">
+        <entry file="file://$PROJECT_DIR$/src/main/java/by/krot/mvc/model/Product.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="443">
-              <caret line="26" column="67" selection-start-line="26" selection-start-column="67" selection-end-line="26" selection-end-column="67" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/main/webapp/WEB-INF/views/showNullBasket.jsp">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="443">
-              <caret line="26" column="67" selection-start-line="26" selection-start-column="67" selection-end-line="26" selection-end-column="67" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/main/webapp/WEB-INF/views/showOrders.jsp">
-          <provider selected="true" editor-type-id="text-editor">
-            <state>
-              <caret selection-end-line="54" selection-end-column="7" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/main/java/by/krot/mvc/dao/OrderDao.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="25">
-              <caret line="2" column="28" lean-forward="true" selection-start-line="2" selection-start-column="28" selection-end-line="2" selection-end-column="28" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/main/java/by/krot/mvc/model/Order.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="132">
-              <caret line="11" column="13" selection-start-line="11" selection-start-column="13" selection-end-line="11" selection-end-column="13" />
-              <folding>
-                <element signature="e#1564#1565#0" expanded="true" />
-                <element signature="e#1600#1601#0" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/main/java/by/krot/mvc/dao/impl/OrderDaoImpl.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="120">
-              <caret line="34" selection-start-line="34" selection-end-line="34" />
+            <state relative-caret-position="48">
+              <caret line="2" lean-forward="true" selection-start-line="2" selection-end-line="2" />
               <folding>
                 <element signature="imports" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="das://3baa6946-7837-4e52-baaa-bc5beb8d2d4a/schema/store/table/orders">
-          <provider selected="true" editor-type-id="com.intellij.database.editor.DatabaseTableFileEditorProvider">
-            <state>
-              <filtering enabled="true" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/main/webapp/WEB-INF/views/welcome.jsp">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="330">
-              <caret line="37" column="73" selection-start-line="37" selection-start-column="73" selection-end-line="37" selection-end-column="73" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/main/java/by/krot/mvc/service/OrderService.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="132">
-              <caret line="6" column="17" selection-start-line="6" selection-start-column="17" selection-end-line="6" selection-end-column="17" />
-              <folding>
-                <element signature="imports" expanded="true" />
+                <element signature="e#908#909#0" expanded="true" />
+                <element signature="e#937#938#0" expanded="true" />
+                <element signature="e#985#986#0" expanded="true" />
+                <element signature="e#1021#1022#0" expanded="true" />
               </folding>
             </state>
           </provider>
@@ -226,8 +107,8 @@
         <option value="FxmlFile" />
         <option value="jsf" />
         <option value="Interface" />
-        <option value="Class" />
         <option value="Jsp File" />
+        <option value="Class" />
       </list>
     </option>
   </component>
@@ -247,15 +128,13 @@
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
   </component>
+  <component name="HighlightingSettingsPerFile">
+    <setting file="file://$PROJECT_DIR$/src/main/webapp/WEB-INF/views/welcome.jsp" root0="FORCE_HIGHLIGHTING" root1="FORCE_HIGHLIGHTING" root2="FORCE_HIGHLIGHTING" />
+  </component>
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
       <list>
-        <option value="$PROJECT_DIR$/src/main/java/by/krot/mvc/Code.java" />
-        <option value="$PROJECT_DIR$/src/main/java/by/krot/mvc/validator/UserValidator.java" />
-        <option value="$PROJECT_DIR$/src/main/webapp/WEB-INF/views/login.jsp" />
-        <option value="$PROJECT_DIR$/src/main/java/by/krot/mvc/service/UserService.java" />
         <option value="$PROJECT_DIR$/src/main/webapp/WEB-INF/appconfig-security.xml" />
-        <option value="$PROJECT_DIR$/src/main/webapp/WEB-INF/views/showUsers.jsp" />
         <option value="$PROJECT_DIR$/src/main/webapp/WEB-INF/appconfig-data.xml" />
         <option value="$PROJECT_DIR$/src/main/java/by/krot/mvc/dao/impl/ProductDaoImpl.java" />
         <option value="$PROJECT_DIR$/src/main/java/by/krot/mvc/dao/ProductDao.java" />
@@ -270,37 +149,42 @@
         <option value="$PROJECT_DIR$/src/main/java/by/krot/mvc/model/Category.java" />
         <option value="$PROJECT_DIR$/src/main/webapp/resources/js/bootstrap.js" />
         <option value="$PROJECT_DIR$/src/main/java/by/krot/mvc/service/ProductService.java" />
-        <option value="$PROJECT_DIR$/src/main/webapp/WEB-INF/views/editUser.jsp" />
-        <option value="$PROJECT_DIR$/src/main/webapp/WEB-INF/views/addProduct.jsp" />
-        <option value="$PROJECT_DIR$/src/main/webapp/WEB-INF/views/addCategory.jsp" />
         <option value="$PROJECT_DIR$/src/main/java/by/krot/mvc/service/impl/ProductServiceImpl.java" />
-        <option value="$PROJECT_DIR$/src/main/java/by/krot/mvc/ClientCode.java" />
         <option value="$PROJECT_DIR$/src/main/java/by/krot/mvc/model/Status.java" />
         <option value="$PROJECT_DIR$/src/main/java/by/krot/mvc/model/User.java" />
         <option value="$PROJECT_DIR$/src/main/java/by/krot/mvc/dao/StatusDao.java" />
         <option value="$PROJECT_DIR$/src/main/java/by/krot/mvc/service/StatusService.java" />
-        <option value="$PROJECT_DIR$/src/main/resources/database.sql" />
         <option value="$PROJECT_DIR$/src/main/java/by/krot/mvc/service/impl/StatusServiceImpl.java" />
         <option value="$PROJECT_DIR$/src/main/java/by/krot/mvc/service/impl/ProducerServiceImpl.java" />
         <option value="$PROJECT_DIR$/src/main/java/by/krot/mvc/service/SecurityService.java" />
         <option value="$PROJECT_DIR$/src/main/java/by/krot/mvc/service/impl/SecurityServiceImpl.java" />
         <option value="$PROJECT_DIR$/src/main/java/by/krot/mvc/model/Producer.java" />
-        <option value="$PROJECT_DIR$/src/main/webapp/WEB-INF/views/showProducts.jsp" />
-        <option value="$PROJECT_DIR$/src/main/java/by/krot/mvc/model/Product.java" />
-        <option value="$PROJECT_DIR$/src/main/webapp/WEB-INF/views/registration.jsp" />
-        <option value="$PROJECT_DIR$/src/main/webapp/WEB-INF/views/showBasket.jsp" />
         <option value="$PROJECT_DIR$/src/main/java/by/krot/mvc/service/OrderService.java" />
-        <option value="$PROJECT_DIR$/src/main/java/by/krot/mvc/model/Order.java" />
-        <option value="$PROJECT_DIR$/src/main/webapp/WEB-INF/views/welcome.jsp" />
         <option value="$PROJECT_DIR$/src/main/java/by/krot/mvc/dao/OrderDao.java" />
         <option value="$PROJECT_DIR$/src/main/java/by/krot/mvc/service/impl/OrderServiceImpl.java" />
-        <option value="$PROJECT_DIR$/src/main/java/by/krot/mvc/dao/impl/OrderDaoImpl.java" />
-        <option value="$PROJECT_DIR$/src/main/java/by/krot/mvc/controller/BasketController.java" />
-        <option value="$PROJECT_DIR$/src/main/webapp/WEB-INF/views/showOrders.jsp" />
         <option value="$APPLICATION_CONFIG_DIR$/consoles/.datagrid/cell" />
-        <option value="$PROJECT_DIR$/src/main/java/by/krot/mvc/controller/ProductController.java" />
-        <option value="$PROJECT_DIR$/src/main/webapp/WEB-INF/views/showNullBasket.jsp" />
+        <option value="$PROJECT_DIR$/src/main/java/by/krot/mvc/model/Order.java" />
+        <option value="$PROJECT_DIR$/src/main/java/by/krot/mvc/dao/impl/OrderDaoImpl.java" />
+        <option value="$PROJECT_DIR$/src/main/webapp/WEB-INF/views/admin.jsp" />
+        <option value="$PROJECT_DIR$/src/main/webapp/WEB-INF/views/login.jsp" />
+        <option value="$PROJECT_DIR$/src/main/webapp/WEB-INF/views/registration.jsp" />
+        <option value="$PROJECT_DIR$/src/main/webapp/WEB-INF/views/test.jsp" />
         <option value="$PROJECT_DIR$/src/main/webapp/WEB-INF/views/showNullOrders.jsp" />
+        <option value="$PROJECT_DIR$/src/main/webapp/WEB-INF/views/showUsers.jsp" />
+        <option value="$PROJECT_DIR$/src/main/webapp/WEB-INF/views/editUser.jsp" />
+        <option value="$PROJECT_DIR$/src/main/webapp/WEB-INF/views/showNullBasket.jsp" />
+        <option value="$PROJECT_DIR$/src/main/webapp/WEB-INF/views/addProduct.jsp" />
+        <option value="$PROJECT_DIR$/src/main/webapp/WEB-INF/views/addCategory.jsp" />
+        <option value="$PROJECT_DIR$/src/main/webapp/WEB-INF/views/.jsp" />
+        <option value="$PROJECT_DIR$/src/main/webapp/WEB-INF/views/showProducts.jsp" />
+        <option value="$PROJECT_DIR$/src/main/webapp/WEB-INF/views/welcome.jsp" />
+        <option value="$PROJECT_DIR$/src/main/webapp/WEB-INF/views/showBasket.jsp" />
+        <option value="$PROJECT_DIR$/src/main/webapp/WEB-INF/views/showOrders.jsp" />
+        <option value="$PROJECT_DIR$/src/main/java/by/krot/mvc/controller/ProductController.java" />
+        <option value="$PROJECT_DIR$/src/main/resources/database.sql" />
+        <option value="$PROJECT_DIR$/src/main/java/by/krot/mvc/controller/BasketController.java" />
+        <option value="$PROJECT_DIR$/src/main/java/by/krot/mvc/ClientCode.java" />
+        <option value="$PROJECT_DIR$/src/main/java/by/krot/mvc/model/Product.java" />
       </list>
     </option>
   </component>
@@ -333,7 +217,7 @@
       <select />
     </treeState>
   </component>
-  <component name="ProjectFrameBounds" extendedState="7">
+  <component name="ProjectFrameBounds" extendedState="6">
     <option name="x" value="-8" />
     <option name="width" value="783" />
     <option name="height" value="870" />
@@ -344,6 +228,8 @@
       <foldersAlwaysOnTop value="true" />
     </navigator>
     <panes>
+      <pane id="PackagesPane" />
+      <pane id="Scope" />
       <pane id="ProjectPane">
         <subPane>
           <expand>
@@ -385,6 +271,15 @@
               <item name="java" type="462c0819:PsiDirectoryNode" />
               <item name="mvc" type="462c0819:PsiDirectoryNode" />
               <item name="controller" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="store" type="b2602c69:ProjectViewProjectNode" />
+              <item name="store" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="main" type="462c0819:PsiDirectoryNode" />
+              <item name="java" type="462c0819:PsiDirectoryNode" />
+              <item name="mvc" type="462c0819:PsiDirectoryNode" />
+              <item name="model" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
               <item name="store" type="b2602c69:ProjectViewProjectNode" />
@@ -440,15 +335,13 @@
           <select />
         </subPane>
       </pane>
-      <pane id="Scope" />
-      <pane id="PackagesPane" />
     </panes>
   </component>
   <component name="PropertiesComponent">
     <property name="DatabaseDriversLRU" value="mysql" />
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="aspect.path.notification.shown" value="true" />
-    <property name="com.android.tools.idea.instantapp.provision.ProvisionBeforeRunTaskProvider.myTimeStamp" value="1554730552990" />
+    <property name="com.android.tools.idea.instantapp.provision.ProvisionBeforeRunTaskProvider.myTimeStamp" value="1554840674521" />
     <property name="database.console.LAST_STATE" value="false" />
     <property name="last_opened_file_path" value="$PROJECT_DIR$/../../hibernatedemo" />
     <property name="nodejs_interpreter_path.stuck_in_default_project" value="undefined stuck path" />
@@ -605,11 +498,13 @@
       <workItem from="1554554237224" duration="10874000" />
       <workItem from="1554637177710" duration="11416000" />
       <workItem from="1554665949607" duration="8395000" />
+      <workItem from="1554808058599" duration="2206000" />
+      <workItem from="1554833643258" duration="7138000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="287706000" />
+    <option name="totallyTimeSpent" value="297050000" />
   </component>
   <component name="TodoView">
     <todo-panel id="selected-file">
@@ -621,7 +516,8 @@
     </todo-panel>
   </component>
   <component name="ToolWindowManager">
-    <frame x="-7" y="-7" width="1550" height="878" extended-state="7" />
+    <frame x="-8" y="-8" width="1936" height="1096" extended-state="6" />
+    <editor active="true" />
     <layout>
       <window_info id="Image Layers" order="0" />
       <window_info id="Capture Tool" order="1" />
@@ -629,7 +525,7 @@
       <window_info id="Web" order="3" sideWeight="0.5037221" side_tool="true" weight="0.22502685" />
       <window_info id="Favorites" order="4" side_tool="true" />
       <window_info id="Designer" order="5" />
-      <window_info content_ui="combo" id="Project" order="6" sideWeight="0.49627793" weight="0.2222973" />
+      <window_info content_ui="combo" id="Project" order="6" sideWeight="0.49627793" weight="0.22502685" />
       <window_info id="Structure" order="7" side_tool="true" weight="0.25" />
       <window_info anchor="bottom" id="Database Console" order="0" weight="0.32963988" />
       <window_info anchor="bottom" id="Terminal" order="1" weight="0.32963988" />
@@ -640,9 +536,9 @@
       <window_info anchor="bottom" id="Version Control" order="6" weight="0.32963988" />
       <window_info anchor="bottom" id="Spring" order="7" weight="0.32963988" />
       <window_info anchor="bottom" id="Message" order="8" />
-      <window_info anchor="bottom" id="Find" order="9" weight="0.25900277" />
-      <window_info anchor="bottom" id="Run" order="10" weight="0.39196676" />
-      <window_info anchor="bottom" id="Debug" order="11" weight="0.5512465" />
+      <window_info anchor="bottom" id="Find" order="9" weight="0.25827107" />
+      <window_info anchor="bottom" id="Run" order="10" weight="0.470651" />
+      <window_info anchor="bottom" id="Debug" order="11" weight="0.470651" />
       <window_info anchor="bottom" id="Cvs" order="12" weight="0.25" />
       <window_info anchor="bottom" id="Inspection" order="13" weight="0.4" />
       <window_info anchor="bottom" id="TODO" order="14" weight="0.32977587" />
@@ -650,7 +546,7 @@
       <window_info anchor="right" id="Bean Validation" order="0" weight="0.32975295" />
       <window_info anchor="right" id="Palette" order="1" />
       <window_info anchor="right" id="Capture Analysis" order="2" />
-      <window_info anchor="right" id="Database" order="3" weight="0.18040541" />
+      <window_info anchor="right" id="Database" order="3" weight="0.17991407" />
       <window_info anchor="right" id="Palette&#9;" order="4" />
       <window_info anchor="right" id="Theme Preview" order="5" />
       <window_info anchor="right" id="Maven" order="6" weight="0.22610097" />
@@ -665,7 +561,7 @@
       <window_info id="Web" order="3" sideWeight="0.5037221" side_tool="true" weight="0.22502685" />
       <window_info id="Favorites" order="4" side_tool="true" />
       <window_info id="Designer" order="5" />
-      <window_info content_ui="combo" id="Project" order="6" sideWeight="0.49627793" weight="0.2222973" />
+      <window_info content_ui="combo" id="Project" order="6" sideWeight="0.49627793" weight="0.22502685" />
       <window_info id="Structure" order="7" side_tool="true" weight="0.25" />
       <window_info anchor="bottom" id="Database Console" order="0" weight="0.32963988" />
       <window_info anchor="bottom" id="Terminal" order="1" weight="0.32963988" />
@@ -676,9 +572,9 @@
       <window_info anchor="bottom" id="Version Control" order="6" weight="0.32963988" />
       <window_info anchor="bottom" id="Spring" order="7" weight="0.32963988" />
       <window_info anchor="bottom" id="Message" order="8" />
-      <window_info anchor="bottom" id="Find" order="9" weight="0.25900277" />
-      <window_info active="true" anchor="bottom" id="Run" order="10" visible="true" weight="0.39196676" />
-      <window_info anchor="bottom" id="Debug" order="11" weight="0.5512465" />
+      <window_info anchor="bottom" id="Find" order="9" weight="0.25827107" />
+      <window_info anchor="bottom" id="Run" order="10" visible="true" weight="0.470651" />
+      <window_info anchor="bottom" id="Debug" order="11" weight="0.470651" />
       <window_info anchor="bottom" id="Cvs" order="12" weight="0.25" />
       <window_info anchor="bottom" id="Inspection" order="13" weight="0.4" />
       <window_info anchor="bottom" id="TODO" order="14" weight="0.32977587" />
@@ -686,7 +582,7 @@
       <window_info anchor="right" id="Bean Validation" order="0" weight="0.32975295" />
       <window_info anchor="right" id="Palette" order="1" />
       <window_info anchor="right" id="Capture Analysis" order="2" />
-      <window_info anchor="right" id="Database" order="3" weight="0.18040541" />
+      <window_info anchor="right" id="Database" order="3" weight="0.17991407" />
       <window_info anchor="right" id="Palette&#9;" order="4" />
       <window_info anchor="right" id="Theme Preview" order="5" />
       <window_info anchor="right" id="Maven" order="6" weight="0.22610097" />
@@ -732,28 +628,16 @@
           <option name="timeStamp" value="6" />
         </line-breakpoint>
         <line-breakpoint enabled="true" type="java-line">
-          <url>file://$PROJECT_DIR$/src/main/webapp/WEB-INF/views/editUser.jsp</url>
-          <line>6</line>
-          <properties />
-          <option name="timeStamp" value="15" />
-        </line-breakpoint>
-        <line-breakpoint enabled="true" type="java-line">
           <url>file://$PROJECT_DIR$/src/main/java/by/krot/mvc/service/impl/CategoryServiceImpl.java</url>
           <line>34</line>
           <properties />
           <option name="timeStamp" value="58" />
         </line-breakpoint>
         <line-breakpoint enabled="true" type="java-line">
-          <url>file://$PROJECT_DIR$/src/main/java/by/krot/mvc/controller/ProductController.java</url>
-          <line>102</line>
+          <url>file://$PROJECT_DIR$/src/main/java/by/krot/mvc/dao/impl/OrderDaoImpl.java</url>
+          <line>65</line>
           <properties />
-          <option name="timeStamp" value="75" />
-        </line-breakpoint>
-        <line-breakpoint enabled="true" type="java-line">
-          <url>file://$PROJECT_DIR$/src/main/java/by/krot/mvc/controller/ProductController.java</url>
-          <line>155</line>
-          <properties />
-          <option name="timeStamp" value="87" />
+          <option name="timeStamp" value="102" />
         </line-breakpoint>
       </breakpoints>
     </breakpoint-manager>
@@ -769,68 +653,6 @@
     <option name="FILTER_TARGETS" value="false" />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/src/main/java/by/krot/mvc/service/StatusService.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="198">
-          <caret line="9" column="35" selection-start-line="9" selection-start-column="35" selection-end-line="9" selection-end-column="35" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="jar://$MAVEN_REPOSITORY$/org/hibernate/javax/persistence/hibernate-jpa-2.1-api/1.0.0.Final/hibernate-jpa-2.1-api-1.0.0.Final.jar!/javax/persistence/EntityManager.class">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="132">
-          <caret line="15" column="17" selection-start-line="15" selection-start-column="17" selection-end-line="15" selection-end-column="17" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="jar://$MAVEN_REPOSITORY$/org/hibernate/javax/persistence/hibernate-jpa-2.1-api/1.0.0.Final/hibernate-jpa-2.1-api-1.0.0.Final-sources.jar!/javax/persistence/EntityTransaction.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="227">
-          <caret line="33" column="17" selection-start-line="33" selection-start-column="17" selection-end-line="33" selection-end-column="23" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/by/krot/mvc/service/ProducerService.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="288">
-          <caret line="15" column="13" selection-start-line="15" selection-start-column="13" selection-end-line="15" selection-end-column="13" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/webapp/WEB-INF/appconfig-root.xml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="336">
-          <caret line="14" column="4" selection-start-line="14" selection-start-column="4" selection-end-line="14" selection-end-column="4" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/by/krot/mvc/service/impl/ProducerServiceImpl.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="566">
-          <caret line="32" column="20" selection-start-line="32" selection-start-column="20" selection-end-line="32" selection-end-column="20" />
-          <folding>
-            <element signature="imports" expanded="true" />
-            <element signature="e#816#817#0" expanded="true" />
-            <element signature="e#862#863#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/webapp/WEB-INF/views/login.jsp">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-648" />
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/by/krot/mvc/service/impl/UserDetailsServiceImpl.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="288">
-          <caret line="25" column="13" selection-start-line="25" selection-start-column="13" selection-end-line="25" selection-end-column="13" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/by/krot/mvc/service/impl/UserServiceImpl.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="-240">
@@ -950,13 +772,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/resources/database.sql">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="425">
-          <caret line="49" column="21" selection-start-line="49" selection-start-column="21" selection-end-line="49" selection-end-column="21" />
-        </state>
-      </provider>
-    </entry>
     <entry file="jar://C:/Program Files/Java/jdk1.8.0_161/src.zip!/java/util/Date.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="-683">
@@ -985,38 +800,10 @@
         </state>
       </provider>
     </entry>
-    <entry file="das://3baa6946-7837-4e52-baaa-bc5beb8d2d4a/schema/store/table/product_orders">
-      <provider selected="true" editor-type-id="com.intellij.database.editor.DatabaseTableFileEditorProvider">
-        <state>
-          <filtering enabled="true" />
-        </state>
-      </provider>
-    </entry>
     <entry file="das://3baa6946-7837-4e52-baaa-bc5beb8d2d4a/schema/store/table/producers">
       <provider selected="true" editor-type-id="com.intellij.database.editor.DatabaseTableFileEditorProvider">
         <state>
           <filtering enabled="true" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="das://3baa6946-7837-4e52-baaa-bc5beb8d2d4a/schema/store/table/products">
-      <provider selected="true" editor-type-id="com.intellij.database.editor.DatabaseTableFileEditorProvider">
-        <state>
-          <filtering enabled="true" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/by/krot/mvc/model/Product.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-530">
-          <caret line="29" column="15" selection-start-line="29" selection-start-column="15" selection-end-line="29" selection-end-column="15" />
-          <folding>
-            <element signature="imports" expanded="true" />
-            <element signature="e#908#909#0" expanded="true" />
-            <element signature="e#937#938#0" expanded="true" />
-            <element signature="e#985#986#0" expanded="true" />
-            <element signature="e#1021#1022#0" expanded="true" />
-          </folding>
         </state>
       </provider>
     </entry>
@@ -1037,41 +824,10 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/webapp/WEB-INF/views/editUser.jsp">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="528">
-          <caret line="24" column="23" selection-start-line="24" selection-start-column="23" selection-end-line="24" selection-end-column="23" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/webapp/WEB-INF/views/registration.jsp">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="397">
-          <caret line="95" selection-start-line="95" selection-end-line="96" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/by/krot/mvc/dao/UserDao.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="88">
           <caret line="7" column="17" selection-start-line="7" selection-start-column="17" selection-end-line="7" selection-end-column="17" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/webapp/WEB-INF/views/showProducts.jsp">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="132">
-          <caret line="46" column="63" selection-start-line="46" selection-start-column="63" selection-end-line="46" selection-end-column="85" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/by/krot/mvc/service/OrderService.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="132">
-          <caret line="6" column="17" selection-start-line="6" selection-start-column="17" selection-end-line="6" selection-end-column="17" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
         </state>
       </provider>
     </entry>
@@ -1089,69 +845,133 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/by/krot/mvc/dao/impl/OrderDaoImpl.java">
+    <entry file="file://$PROJECT_DIR$/src/main/java/by/krot/mvc/service/OrderService.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="120">
-          <caret line="34" selection-start-line="34" selection-end-line="34" />
+        <state relative-caret-position="336">
+          <caret line="14" column="9" selection-start-line="14" selection-start-column="9" selection-end-line="14" selection-end-column="9" />
           <folding>
             <element signature="imports" expanded="true" />
           </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/by/krot/mvc/service/impl/OrderServiceImpl.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="421">
-          <caret line="44" selection-start-line="44" selection-end-line="44" />
-          <folding>
-            <element signature="imports" expanded="true" />
-            <element signature="e#799#800#0" expanded="true" />
-            <element signature="e#839#840#0" expanded="true" />
-            <element signature="e#897#898#0" expanded="true" />
-            <element signature="e#940#941#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/by/krot/mvc/controller/BasketController.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="440">
-          <caret line="20" column="17" selection-start-line="20" selection-start-column="17" selection-end-line="20" selection-end-column="17" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/by/krot/mvc/model/Order.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="132">
-          <caret line="11" column="13" selection-start-line="11" selection-start-column="13" selection-end-line="11" selection-end-column="13" />
-          <folding>
-            <element signature="e#1564#1565#0" expanded="true" />
-            <element signature="e#1600#1601#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/webapp/WEB-INF/views/showBasket.jsp">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="516">
-          <caret line="76" column="23" selection-start-line="76" selection-start-column="23" selection-end-line="76" selection-end-column="23" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/by/krot/mvc/dao/OrderDao.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="25">
-          <caret line="2" column="28" lean-forward="true" selection-start-line="2" selection-start-column="28" selection-end-line="2" selection-end-column="28" />
+        <state relative-caret-position="432">
+          <caret line="18" column="9" selection-start-line="18" selection-start-column="9" selection-end-line="18" selection-end-column="9" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/by/krot/mvc/dao/impl/OrderDaoImpl.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="446">
+          <caret line="66" column="5" lean-forward="true" selection-start-line="66" selection-start-column="5" selection-end-line="66" selection-end-column="5" />
+          <folding>
+            <element signature="imports" expanded="true" />
+            <element signature="e#2168#2169#0" expanded="true" />
+            <element signature="e#2212#2213#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/webapp/WEB-INF/views/admin.jsp">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="288">
+          <caret line="12" selection-start-line="12" selection-end-line="12" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/webapp/WEB-INF/views/registration.jsp">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="312">
+          <caret line="13" selection-start-line="13" selection-end-line="13" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/webapp/WEB-INF/views/test.jsp">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="240">
+          <caret line="10" column="16" selection-start-line="10" selection-start-column="11" selection-end-line="10" selection-end-column="16" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/webapp/WEB-INF/views/showNullOrders.jsp">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="432">
+          <caret line="18" selection-start-line="18" selection-end-line="19" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/webapp/WEB-INF/views/editUser.jsp">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="659">
+          <caret line="61" column="70" selection-start-line="61" selection-start-column="70" selection-end-line="61" selection-end-column="70" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/webapp/WEB-INF/views/login.jsp">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="662">
+          <caret line="44" column="6" selection-start-line="44" selection-start-column="6" selection-end-line="44" selection-end-column="6" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/webapp/WEB-INF/views/showUsers.jsp">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="638">
+          <caret line="49" column="70" selection-start-line="49" selection-start-column="70" selection-end-line="49" selection-end-column="70" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/webapp/WEB-INF/views/addProduct.jsp">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="566">
+          <caret line="84" column="78" lean-forward="true" selection-start-line="84" selection-start-column="78" selection-end-line="84" selection-end-column="78" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/webapp/WEB-INF/views/addCategory.jsp">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="591">
+          <caret line="30" column="78" selection-start-line="30" selection-start-column="78" selection-end-line="30" selection-end-column="78" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/webapp/WEB-INF/views/showNullBasket.jsp">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="408">
+          <caret line="17" column="70" selection-start-line="17" selection-start-column="70" selection-end-line="17" selection-end-column="70" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/webapp/WEB-INF/views/.jsp">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="72">
+          <caret line="3" lean-forward="true" selection-start-line="3" selection-end-line="3" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/webapp/WEB-INF/views/showProducts.jsp">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="446">
+          <caret line="34" column="41" lean-forward="true" selection-start-line="34" selection-start-column="41" selection-end-line="34" selection-end-column="41" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/main/webapp/WEB-INF/views/welcome.jsp">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="330">
-          <caret line="37" column="73" selection-start-line="37" selection-start-column="73" selection-end-line="37" selection-end-column="73" />
+        <state relative-caret-position="319">
+          <caret line="32" column="70" selection-start-line="32" selection-start-column="70" selection-end-line="32" selection-end-column="70" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/webapp/WEB-INF/views/showBasket.jsp">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="356">
+          <caret line="33" column="34" selection-start-line="33" selection-start-column="34" selection-end-line="33" selection-end-column="34" />
         </state>
       </provider>
     </entry>
@@ -1164,32 +984,92 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/main/webapp/WEB-INF/views/showOrders.jsp">
       <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="494">
+          <caret line="38" column="45" selection-start-line="38" selection-start-column="45" selection-end-line="38" selection-end-column="45" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/resources/database.sql">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="168">
+          <caret line="67" column="21" lean-forward="true" selection-start-line="67" selection-start-column="21" selection-end-line="67" selection-end-column="21" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="das://3baa6946-7837-4e52-baaa-bc5beb8d2d4a/schema/store/table/product_orders">
+      <provider selected="true" editor-type-id="com.intellij.database.editor.DatabaseTableFileEditorProvider">
         <state>
-          <caret selection-end-line="54" selection-end-column="7" />
+          <filtering enabled="true" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="das://3baa6946-7837-4e52-baaa-bc5beb8d2d4a/schema/store/table/products">
+      <provider selected="true" editor-type-id="com.intellij.database.editor.DatabaseTableFileEditorProvider">
+        <state>
+          <filtering enabled="true" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/by/krot/mvc/service/impl/OrderServiceImpl.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="431">
+          <caret line="33" column="19" selection-start-line="33" selection-start-column="19" selection-end-line="33" selection-end-column="19" />
+          <folding>
+            <element signature="imports" expanded="true" />
+            <element signature="e#806#807#0" expanded="true" />
+            <element signature="e#846#847#0" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/by/krot/mvc/controller/ProductController.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-217">
-          <caret line="157" column="34" selection-start-line="157" selection-start-column="34" selection-end-line="157" selection-end-column="34" />
+        <state relative-caret-position="1295">
+          <caret line="97" selection-start-line="97" selection-end-line="97" />
           <folding>
             <element signature="imports" expanded="true" />
           </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/webapp/WEB-INF/views/showNullBasket.jsp">
+    <entry file="file://$PROJECT_DIR$/src/main/java/by/krot/mvc/model/Order.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="443">
-          <caret line="26" column="67" selection-start-line="26" selection-start-column="67" selection-end-line="26" selection-end-column="67" />
+        <state relative-caret-position="192">
+          <caret line="13" column="3" selection-start-line="13" selection-start-column="3" selection-end-line="13" selection-end-column="3" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/webapp/WEB-INF/views/showNullOrders.jsp">
+    <entry file="file://$PROJECT_DIR$/src/main/java/by/krot/mvc/ClientCode.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="443">
-          <caret line="26" column="67" selection-start-line="26" selection-start-column="67" selection-end-line="26" selection-end-column="67" />
+        <state relative-caret-position="240">
+          <caret line="10" column="43" selection-start-line="10" selection-start-column="43" selection-end-line="10" selection-end-column="43" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/by/krot/mvc/controller/BasketController.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="167">
+          <caret line="49" column="67" lean-forward="true" selection-start-line="49" selection-start-column="67" selection-end-line="49" selection-end-column="67" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/by/krot/mvc/model/Product.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="48">
+          <caret line="2" lean-forward="true" selection-start-line="2" selection-end-line="2" />
+          <folding>
+            <element signature="imports" expanded="true" />
+            <element signature="e#908#909#0" expanded="true" />
+            <element signature="e#937#938#0" expanded="true" />
+            <element signature="e#985#986#0" expanded="true" />
+            <element signature="e#1021#1022#0" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>

@@ -28,6 +28,7 @@ D:\Projects\Новая папка\store\src\main\java\by\krot\mvc\model\Role.jav
 D:\Projects\Новая папка\store\src\main\java\by\krot\mvc\dao\impl\OrderDaoImpl.java
 D:\Projects\Новая папка\store\src\main\java\by\krot\mvc\model\Order.java
 D:\Projects\Новая папка\store\src\main\java\by\krot\mvc\controller\UserController.java
+D:\Projects\Новая папка\store\src\main\java\by\krot\mvc\controller\BasketController.java
 D:\Projects\Новая папка\store\src\main\java\by\krot\mvc\dao\RoleDao.java
 D:\Projects\Новая папка\store\src\main\java\by\krot\mvc\dao\ProducerDao.java
 D:\Projects\Новая папка\store\src\main\java\by\krot\mvc\service\impl\SecurityServiceImpl.java

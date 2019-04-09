@@ -1,6 +1,5 @@
 package by.krot.mvc.model;
 
-import org.springframework.transaction.annotation.Transactional;
 
 import javax.persistence.*;
 

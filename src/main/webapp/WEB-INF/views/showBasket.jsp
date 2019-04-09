@@ -7,20 +7,11 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="utf-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
-    <meta name="description" content="">
-    <meta name="author" content="">
-
-    <title>Basket</title>
-
-
-    <link href="${contextPath}/resources/css/bootstrap.min.css" rel="stylesheet">
-    <link href="${contextPath}/resources/css/common.css" rel="stylesheet">
-
+     <title>Basket</title>
 </head>
 <body>
+
+<jsp:include page=".jsp"/>
 
 <div class="container">
     <table class="table table-bordered text-center">
@@ -40,7 +31,7 @@
                 <td>${list.description}</td>
                 <td>${list.price}</td>
                 <td>${list.producer}</td>
-                <td><a href="basket/cancel/${list.id}" class="btn btn-outline-danger">cancel</a></td>
+                <td><a href="shop/basket/cancel/${list.id}" class="btn btn-outline-danger">cancel</a></td>
             </tr>
         </c:forEach>
         </tbody>
@@ -74,12 +65,11 @@
 
         <div>
             <button type="submit" class="btn btn-primary">Send</button>
-            <a href="/shop/welcome" class="btn btn-outline-danger">Back</a>
-
+            <a href="/shop/welcome" class="btn btn-outline-secondary">Back</a>
         </div>
     </form:form>
 
+
 </div>
 </body>
-
 </html>

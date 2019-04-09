@@ -6,16 +6,11 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="utf-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
-    <meta name="description" content="">
-    <meta name="author" content="">
-
-    <title>Welcome</title>
-    <link href="${contextPath}/resources/css/bootstrap.min.css" rel="stylesheet">
+      <title>Welcome</title>
 </head>
 <body>
+
+<jsp:include page=".jsp"/>
 
 <div class="container">
 
@@ -26,7 +21,7 @@
         <form id="users" method="GET" action="${contextPath}/users">
             <input type="hidden" name="${_csrf.parameterName}" value="${_csrf.token}"/>
         </form>
-        <form id="basket" method="GET" action="${contextPath}/product/basket">
+        <form id="basket" method="GET" action="/shop/basket/">
             <input type="hidden" name="${_csrf.parameterName}" value="${_csrf.token}"/>
         </form>
         <form id="addProduct" method="GET" action="${contextPath}/product/addproduct">
@@ -35,7 +30,7 @@
         <form id="addCategory" method="GET" action="${contextPath}/product/addcategory">
             <input type="hidden" name="${_csrf.parameterName}" value="${_csrf.token}"/>
         </form>
-        <form id="showOrders" method="GET" action="${contextPath}/product/basket/orders">
+        <form id="showOrders" method="GET" action="/shop/basket/orders">
             <input type="hidden" name="${_csrf.parameterName}" value="${_csrf.token}"/>
         </form>
         <h2>Welcome ${pageContext.request.userPrincipal.name} | <a onclick="document.forms['logoutForm'].submit()"
@@ -68,7 +63,5 @@
         </tbody>
     </table>
 </div>
-<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.2/jquery.min.js"></script>
-<script src="${contextPath}/resources/js/bootstrap.min.js"></script>
 </body>
 </html>

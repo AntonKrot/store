@@ -85,9 +85,8 @@ CREATE TABLE product_orders
   order_id   INT NOT NULL,
 
   FOREIGN KEY (product_id) REFERENCES products (id),
-  FOREIGN KEY (order_id) REFERENCES orders (id),
+  FOREIGN KEY (order_id) REFERENCES orders (id)
 
-  UNIQUE (product_id, order_id)
 );
 
 -- Insert data

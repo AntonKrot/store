@@ -8,20 +8,11 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="utf-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
-    <meta name="description" content="">
-    <meta name="author" content="">
-
     <title>Orders</title>
-
-    <link href="${contextPath}/resources/css/bootstrap.min.css" rel="stylesheet">
-    <link href="${contextPath}/resources/css/common.css" rel="stylesheet">
-
-
 </head>
 <body>
+
+<jsp:include page=".jsp"/>
 
 <c:forEach var="order" items="${orders}">
     <span class="border border-dark">
@@ -41,11 +32,13 @@
                 <td>${order.id}</td>
                 <td>${order.user.username}</td>
                 <td>${order.date}</td>
-                <td>${contextPath}</td>
-                <td><a href="${contextPath}/more/${order.id}" class="btn btn-outline-success">More</a></td>
-                <td><a href="/shop/product/accept/order/${order.id}" class="btn btn-outline-primary">Accept</a></td>
-                <td><a href="/shop/product/cancel/order/${order.id}" class="btn btn-outline-danger">Cancel</a></td>
-            </tr>
+                <td>
+                    <div>
+                        <a href="${contextPath}/more/${order.id}" class="btn btn-outline-success">More</a>
+                        <a href="/shop/basket/accept/order/${order.id}" class="btn btn-outline-primary">Accept</a>
+                        <a href="/shop/basket/cancel/order/${order.id}" class="btn btn-outline-danger">Cancel</a>
+                    </div>
+                </tr>
             </tbody>
         </table>
     </span>

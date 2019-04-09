@@ -63,7 +63,7 @@ public class OrderDaoImpl implements OrderDao {
     @Override
     @Transactional
     public void addOrder(Order order) {
-        entityManager.persist(order);
+        entityManager.merge(order);
     }
 
     @Override

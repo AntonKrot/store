@@ -22,7 +22,7 @@ public class Order {
     private String address;
     @Column(name = "phone", length = 9)
     private String phone;
-    @ManyToMany(cascade = CascadeType.ALL, fetch=FetchType.EAGER)
+    @ManyToMany(cascade = CascadeType.ALL, fetch = FetchType.EAGER)
     @JoinTable(name = "product_orders", joinColumns = @JoinColumn(name = "order_id"),
             inverseJoinColumns = @JoinColumn(name = "product_id"))
     private Set<Product> products;
