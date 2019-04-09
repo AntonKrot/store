@@ -2,11 +2,11 @@ package by.krot.mvc.controller;
 
 
 import by.krot.mvc.model.User;
+import by.krot.mvc.service.CategoryService;
 import by.krot.mvc.service.SecurityService;
 import by.krot.mvc.service.UserService;
 import by.krot.mvc.validator.UserValidator;
 import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.security.web.servletapi.SecurityContextHolderAwareRequestWrapper;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
 import org.springframework.validation.BindingResult;
@@ -22,7 +22,7 @@ import org.springframework.web.bind.annotation.RequestMethod;
  * @version 1.0
  */
 
-@Controller
+@Controller("/")
 public class UserController {
 
     @Autowired
@@ -33,6 +33,9 @@ public class UserController {
 
     @Autowired
     private UserValidator userValidator;
+
+    @Autowired
+    CategoryService categoryService;
 
     @RequestMapping(value = "/registration", method = RequestMethod.GET)
     public String registration(Model model) {
@@ -71,15 +74,12 @@ public class UserController {
         return "login";
     }
 
-    @RequestMapping(value = {"/", "/welcome"}, method = RequestMethod.GET)
-    public String welcome(Model model) {
-        return "welcome";
-    }
 
     @RequestMapping(value = {"/admin"}, method = RequestMethod.GET)
     public String admin(Model model) {
         return "admin";
     }
+
 
     @RequestMapping(value = "/users", method = RequestMethod.GET)
     public String showUser(Model model) {
@@ -105,10 +105,16 @@ public class UserController {
         return "redirect:/welcome";
     }
 
-@RequestMapping(value = "/role/{id}", method = RequestMethod.GET)
+    @RequestMapping(value = "/role/{id}", method = RequestMethod.GET)
     public String addAdminRole(@PathVariable("id") Long id) {
         userService.giveAdminRole(userService.findById(id));
         return "redirect:/users";
+    }
+
+    @RequestMapping(value = {"/", "/welcome"}, method = RequestMethod.GET)
+    public String welcome(Model model) {
+        model.addAttribute("categories", categoryService.findAllCategory());
+        return "welcome";
+    }
 }
 
-}

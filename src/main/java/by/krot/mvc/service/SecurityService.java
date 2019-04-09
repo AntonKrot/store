@@ -14,4 +14,5 @@ public interface SecurityService {
 
     void autoLogin(String username, String password);
 
+    Long getCurrentUserId();
 }

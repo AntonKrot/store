@@ -1,6 +1,10 @@
 package by.krot.mvc.model;
 
+import org.springframework.transaction.annotation.Transactional;
+
 import javax.persistence.*;
+
+import java.util.Set;
 
 import static javax.persistence.GenerationType.AUTO;
 
@@ -23,9 +27,16 @@ public class Product {
     @ManyToOne
     @JoinColumn(name = "producer_id", nullable = false)
     private Producer producer;
-    @ManyToOne
-    @JoinColumn(name = "order_id")
-    private Order order;
+    @ManyToMany
+    private Set<Order> orders;
+
+    public Set<Order> getOrders() {
+        return orders;
+    }
+
+    public void setOrders(Set<Order> orders) {
+        this.orders = orders;
+    }
 
     public Long getId() {
         return id;
@@ -75,11 +86,11 @@ public class Product {
         this.producer = producer;
     }
 
-//    public Order getOrder() {
-//        return order;
-//    }
-//
-//    public void setOrder(Order order) {
-//        this.order = order;
-//    }
+    @Override
+    public String toString() {
+        return  "model='" + model + '\'' +
+                ", price='" + price + '\'' +
+                ", description='" + description;
+    }
+
 }

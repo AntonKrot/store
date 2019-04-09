@@ -17,8 +17,8 @@ public class Producer {
     private Long id;
     @Column(name = "name", unique = true, nullable = false)
     private String name;
-    @OneToMany
-    private Set<Product> products = new HashSet<Product>();
+    @OneToMany(mappedBy = "producer",cascade = CascadeType.ALL, fetch=FetchType.EAGER)
+    private Set<Product> products = new HashSet<>();
 
     public Long getId() {
         return id;
@@ -42,5 +42,10 @@ public class Producer {
 
     public void setProducts(Set<Product> products) {
         this.products = products;
+    }
+
+    @Override
+    public String toString() {
+        return name;
     }
 }

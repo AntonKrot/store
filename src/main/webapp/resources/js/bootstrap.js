@@ -4432,4 +4432,10 @@
   Object.defineProperty(exports, '__esModule', { value: true });
 
 }));
+
+// Material Select Initialization
+$(document).ready(function() {
+  $('.mdb-select').materialSelect();
+});
+
 //# sourceMappingURL=bootstrap.js.map

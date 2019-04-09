@@ -1,5 +1,7 @@
 package by.krot.mvc.model;
 
+import org.springframework.transaction.annotation.Transactional;
+
 import javax.persistence.*;
 import java.util.HashSet;
 import java.util.Set;
@@ -15,8 +17,8 @@ public class Category {
     private Long id;
     @Column(name = "name", unique = true, nullable = false)
     private String name;
-    @OneToMany
-    private Set<Product> products = new HashSet<Product>();
+    @OneToMany(mappedBy = "category",cascade = CascadeType.ALL, fetch=FetchType.EAGER)
+    private Set<Product> products = new HashSet<>();
 
     public Long getId() {
         return id;

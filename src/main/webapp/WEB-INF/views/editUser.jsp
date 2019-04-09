@@ -25,6 +25,7 @@
 <div class="container">
     <form id="updateForm" class="form-signin" method="POST" action="${contextPath}/update">
         <input type="hidden" name="${_csrf.parameterName}" value="${_csrf.token}"/>
+
         <h2 class="form-heading text-center mt-2 mb-4">Edit your account</h2>
         <input type="hidden" title="id" type="text" name="id" value="${user.id}"/>
 

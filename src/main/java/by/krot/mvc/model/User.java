@@ -1,6 +1,7 @@
 package by.krot.mvc.model;
 
 import javax.persistence.*;
+import java.util.HashSet;
 import java.util.Objects;
 import java.util.Set;
 
@@ -35,14 +36,12 @@ public class User {
     private String phone;
     @Transient
     private String confirmPassword;
-    @Transient
-    private String oldPassword;
     @ManyToMany
     @JoinTable(name = "user_roles", joinColumns = @JoinColumn(name = "user_id"),
             inverseJoinColumns = @JoinColumn(name = "role_id"))
     private Set<Role> roles;
-//    @OneToMany
-//    private Set<Order> orders = new HashSet<>();
+    @OneToMany(mappedBy = "user",cascade = CascadeType.ALL, fetch=FetchType.EAGER)
+    private Set<Order> orders = new HashSet<>();
 
 
     public User() {
@@ -58,22 +57,21 @@ public class User {
         this.address = address;
     }
 
-//    public Set<Order> getOrders() {
-//        return orders;
+    public Set<Order> getOrders() {
+        return orders;
+    }
+
+    public void setOrders(Set<Order> orders) {
+        this.orders = orders;
+    }
+
+//    public String getOldPassword() {
+//        return oldPassword;
 //    }
 //
-//    public void setOrders(Set<Order> orders) {
-//        this.orders = orders;
+//    public void setOldPassword(String oldPassword) {
+//        this.oldPassword = oldPassword;
 //    }
-
-
-    public String getOldPassword() {
-        return oldPassword;
-    }
-
-    public void setOldPassword(String oldPassword) {
-        this.oldPassword = oldPassword;
-    }
 
     public String getConfirmPassword() {
         return confirmPassword;
