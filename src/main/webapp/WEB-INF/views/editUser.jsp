@@ -55,11 +55,12 @@
             <input title="phone" type="text" id="phone" placeholder="Phone" class="form-control" name="phone"
                    value="${user.phone}">
         </div>
-        <button onclick="document.forms['updateForm'].submit()" class="btn btn-primary">Confirm
-        </button>
+        <div>
+            <button onclick="document.forms['updateForm'].submit()" class="btn btn-primary">Confirm</button>
+            <a href="/shop/welcome" class="btn btn-outline-secondary">Back</a>
+        </div>
     </form>
 
-    <a href="/shop/welcome" class="btn btn-outline-secondary">Back</a>
 </div>
 </body>
 </html>

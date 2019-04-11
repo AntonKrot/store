@@ -24,10 +24,12 @@ by\krot\mvc\model\Producer.class
 by\krot\mvc\dao\UserDao.class
 by\krot\mvc\service\impl\ProductServiceImpl.class
 by\krot\mvc\validator\UserValidator.class
+by\krot\mvc\controller\CategoryController.class
 by\krot\mvc\dao\CategoryDao.class
 by\krot\mvc\service\impl\ProducerServiceImpl.class
 by\krot\mvc\service\OrderService.class
 by\krot\mvc\controller\ProductController.class
+by\krot\mvc\controller\ProducerController.class
 by\krot\mvc\model\User.class
 by\krot\mvc\service\SecurityService.class
 by\krot\mvc\service\impl\StatusServiceImpl.class

@@ -33,7 +33,7 @@ public class User {
     @Column(name = "address")
     private String address;
     @Column(name = "phone")
-    private String phone;
+    private int phone;
     @Transient
     private String confirmPassword;
     @ManyToMany
@@ -65,14 +65,6 @@ public class User {
         this.orders = orders;
     }
 
-//    public String getOldPassword() {
-//        return oldPassword;
-//    }
-//
-//    public void setOldPassword(String oldPassword) {
-//        this.oldPassword = oldPassword;
-//    }
-
     public String getConfirmPassword() {
         return confirmPassword;
     }
@@ -89,11 +81,11 @@ public class User {
         this.roles = roles;
     }
 
-    public String getPhone() {
+    public int getPhone() {
         return phone;
     }
 
-    public void setPhone(String phone) {
+    public void setPhone(int phone) {
         this.phone = phone;
     }
 

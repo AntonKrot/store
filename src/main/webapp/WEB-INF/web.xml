@@ -6,6 +6,7 @@
 
     <display-name>Store</display-name>
 
+
     <context-param>
         <param-name>contextConfigLocation</param-name>
         <param-value>/WEB-INF/appconfig-root.xml</param-value>

@@ -22,9 +22,7 @@ public class ProductServiceImpl implements ProductService {
     private ProductDao productDao;
 
     @Override
-    public void addProduct(Product product, Category category, Producer producer) {
-        product.setCategory(category);
-        product.setProducer(producer);
+    public void addProduct(Product product) {
         productDao.save(product);
     }
 

@@ -7,7 +7,7 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-     <title>Basket</title>
+    <title>Basket</title>
 </head>
 <body>
 
@@ -31,7 +31,7 @@
                 <td>${list.description}</td>
                 <td>${list.price}</td>
                 <td>${list.producer}</td>
-                <td><a href="shop/basket/cancel/${list.id}" class="btn btn-outline-danger">cancel</a></td>
+                <td><a href="/shop/basket/cancel/${list.id}" class="btn btn-outline-danger">cancel</a></td>
             </tr>
         </c:forEach>
         </tbody>
@@ -62,6 +62,9 @@
                 <form:errors title="Comment Errors" path="comment"></form:errors>
             </div>
         </spring:bind>
+
+
+        <div class="alert alert-dark">Total price: ${order.totalPrice}</div>
 
         <div>
             <button type="submit" class="btn btn-primary">Send</button>

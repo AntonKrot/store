@@ -2,16 +2,23 @@ package by.krot.mvc.controller;
 
 import by.krot.mvc.model.Category;
 import by.krot.mvc.model.Order;
+import by.krot.mvc.model.Producer;
 import by.krot.mvc.model.Product;
 import by.krot.mvc.service.*;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
-import org.springframework.web.bind.annotation.ModelAttribute;
-import org.springframework.web.bind.annotation.PathVariable;
-import org.springframework.web.bind.annotation.RequestMapping;
-import org.springframework.web.bind.annotation.RequestMethod;
+import org.springframework.web.bind.annotation.*;
+import org.springframework.web.multipart.MultipartFile;
+import org.springframework.web.multipart.MultipartHttpServletRequest;
+import sun.misc.IOUtils;
 
+import javax.imageio.ImageIO;
+import java.awt.image.BufferedImage;
+import java.io.*;
+import java.nio.file.Files;
+import java.nio.file.Path;
+import java.nio.file.Paths;
 import java.util.Date;
 import java.util.HashSet;
 import java.util.List;
@@ -56,7 +63,7 @@ public class ProductController {
         return "showProducts";
     }
 
-    @RequestMapping(value = "/addproduct", method = RequestMethod.GET)
+    @RequestMapping(value = "/add", method = RequestMethod.GET)
     String addProduct(Model model) {
         model.addAttribute("product", new Product());
         model.addAttribute("categories", categoryService.findAllCategory());
@@ -64,35 +71,18 @@ public class ProductController {
         return "addProduct";
     }
 
-    @RequestMapping(value = "/addproduct", method = RequestMethod.POST)
-    String addProduct(@ModelAttribute("product") Product product) {
-
-        productService.addProduct(product, categoryService.findCategoryById(1L), producerService.findProducerById(1L));
+    @RequestMapping(value = "/add", method = RequestMethod.POST)
+    String addProduct(@ModelAttribute("product") Product product, @RequestParam("idProducer") Long idProducer, @RequestParam("idCategory") Long idCategory) {
+        product.setProducer(producerService.findProducerById(idProducer));
+        product.setCategory(categoryService.findCategoryById(idCategory));
+        productService.addProduct(product);
         return "redirect:/welcome";
     }
 
-    @RequestMapping(value = "category/product/delete/{id}", method = RequestMethod.GET)
-    String deleteProduct(@PathVariable("id") Long id) {
-        productService.deleteProductById(id);
-        return "redirect:/welcome";
-    }
-
-
-    @RequestMapping(value = "/addcategory", method = RequestMethod.GET)
-    String addCategory(Model model) {
-        model.addAttribute("category", new Category());
-        return "addCategory";
-    }
-
-    @RequestMapping(value = "/addcategory", method = RequestMethod.POST)
-    String addCategory(@ModelAttribute("category") Category category) {
-        categoryService.addCategory(category);
-        return "redirect:/welcome";
-    }
 
     @RequestMapping(value = "/delete/{id}", method = RequestMethod.GET)
-    String delteCategory(@PathVariable("id") Long id) {
-        categoryService.deleteCategoryById(id);
+    String deleteProduct(@PathVariable("id") Long id) {
+        productService.deleteProductById(id);
         return "redirect:/welcome";
     }
 

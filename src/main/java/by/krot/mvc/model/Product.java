@@ -1,6 +1,5 @@
 package by.krot.mvc.model;
 
-
 import javax.persistence.*;
 
 import java.util.Set;
@@ -14,11 +13,15 @@ public class Product {
     @GeneratedValue(strategy = AUTO)
     @Column(name = "id", unique = true, nullable = false)
     private Long id;
+    @Lob
+    @Column(name = "picture")
+    @Basic(fetch = FetchType.LAZY)
+    private byte[] picture;
     @Column(name = "model", unique = true, nullable = false)
     private String model;
     @Column(name = "price", nullable = false)
-    private String price;
-    @Column(name="description", nullable = false)
+    private Double price;
+    @Column(name = "description", nullable = false)
     private String description;
     @ManyToOne
     @JoinColumn(name = "category_id", nullable = false)
@@ -31,6 +34,14 @@ public class Product {
 
     public Set<Order> getOrders() {
         return orders;
+    }
+
+    public byte[] getPicture() {
+        return picture;
+    }
+
+    public void setPicture(byte[] picture) {
+        this.picture = picture;
     }
 
     public void setOrders(Set<Order> orders) {
@@ -53,11 +64,11 @@ public class Product {
         this.model = model;
     }
 
-    public String getPrice() {
+    public Double getPrice() {
         return price;
     }
 
-    public void setPrice(String price) {
+    public void setPrice(Double price) {
         this.price = price;
     }
 
@@ -87,7 +98,7 @@ public class Product {
 
     @Override
     public String toString() {
-        return  "model='" + model + '\'' +
+        return "model='" + model + '\'' +
                 ", price='" + price + '\'' +
                 ", description='" + description;
     }

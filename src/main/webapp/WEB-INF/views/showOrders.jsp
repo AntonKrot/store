@@ -22,8 +22,7 @@
                 <th scope="col">Order №</th>
                 <th scope="col">Username</th>
                 <th scope="col">Date of order</th>
-                <th scope="col"></th>
-                <th scope="col"></th>
+                <th scope="col">Total price</th>
                 <th scope="col"></th>
             </tr>
             </thead>
@@ -32,12 +31,14 @@
                 <td>${order.id}</td>
                 <td>${order.user.username}</td>
                 <td>${order.date}</td>
+                <td>${order.totalPrice}</td>
                 <td>
                     <div>
                         <a href="${contextPath}/more/${order.id}" class="btn btn-outline-success">More</a>
                         <a href="/shop/basket/accept/order/${order.id}" class="btn btn-outline-primary">Accept</a>
                         <a href="/shop/basket/cancel/order/${order.id}" class="btn btn-outline-danger">Cancel</a>
                     </div>
+                </td>
                 </tr>
             </tbody>
         </table>

@@ -4,90 +4,70 @@
 <%@ taglib prefix="from" uri="http://www.springframework.org/tags/form" %>
 <%@ page contentType="text/html;charset=UTF-8" language="java" %>
 <c:set var="contextPath" value="${pageContext.request.contextPath}"/>
-
 <html>
 <head>
-    <title>Create an account</title>
+    <title>Title</title>
 </head>
 <body>
 
 <jsp:include page=".jsp"/>
 
-<div class="container w-50">
-    <h2 class="form-heading text-center mt-5 mb-4">Add product</h2>
+<div class="container">
+    <form:form methodParam="product" id="createForm" class="form-signin" method="POST" action="/shop/product/add">
 
-    <%--&lt;%&ndash;@elvariable id="category" type=""&ndash;%&gt;--%>
-    <%--<form:form method="POST" modelAttribute="category" class="form-signin">--%>
-    <%--<select class="browser-default custom-select" >--%>
-    <%--&lt;%&ndash;<option value="" disabled selected>Choose category</option>&ndash;%&gt;--%>
-    <%--<c:forEach var="list" items="${categories}">--%>
-    <%--<option value="${list}">${list.name}</option>--%>
-    <%--</c:forEach>--%>
-    <%--</select>--%>
-    <%--</form:form>--%>
+        <input type="hidden" name="${_csrf.parameterName}" value="${_csrf.token}"/>
 
-    <%--&lt;%&ndash;@elvariable id="producer" type=""&ndash;%&gt;--%>
-    <%--<form:form method="POST" modelAttribute="producer" class="form-signin">--%>
-    <%--<select class="browser-default custom-select">--%>
-    <%--<option value="" disabled selected>Choose producer</option>--%>
-    <%--<c:forEach var="list" items="${producers}">--%>
-    <%--<option value="${list}">${list.name}</option>--%>
-    <%--</c:forEach>--%>
-    <%--</select>--%>
-    <%--</form:form>--%>
+        <h2 class="form-heading text-center mt-2 mb-4">Add product</h2>
 
-    <%--@elvariable id="product" type=""--%>
-    <form:form method="POST" modelAttribute="product" class="form-signin">
 
-        <spring:bind path="category"> <%-- Object --%>
-            <form:select path="category" class="browser-default custom-select">
-                <option value="" disabled selected>Choose category</option>
-                <c:forEach var="list" items="${categories}">
-                    <option value="${list}">${list.name}</option>
-                </c:forEach>
-            </form:select>
-        </spring:bind>
+        <%--<select name="category" id="category">--%>
+        <%--<c:forEach items="${categories}" var="category">--%>
+        <%--<option value="${category}">${category.name}</option>--%>
+        <%--</c:forEach>--%>
+        <%--</select>--%>
 
-        <spring:bind path="producer"> <%-- Object --%>
-            <form:select path="producer" class="browser-default custom-select">
-                <option value="" disabled selected>Choose producer</option>
-                <c:forEach var="list" items="${producers}">
-                    <option value="${list}">${list.name}</option>
-                </c:forEach>
-            </form:select>
-        </spring:bind>
+        <%--<form:select path="category">--%>
+        <%--<form:options items="categories"/>--%>
+        <%--</form:select>--%>
 
-        <spring:bind path="model">
-            <div class="form-group ${status.error ? 'has-error' : ''}">
-                <form:input title="model" type="text" path="model" class="form-control" placeholder="Model"
-                            autofocus="true"></form:input>
-                <form:errors title="Model Errors" path="model"></form:errors>
-            </div>
-        </spring:bind>
 
-        <spring:bind path="price">
-            <div class="form-group ${status.error ? 'has-error' : ''}">
-                <form:input title="Price" type="text" path="price" class="form-control"
-                            placeholder="Price"></form:input>
-                <form:errors title="Price Errors" path="price"></form:errors>
-            </div>
-        </spring:bind>
+        <select name="idProducer" id="producer">
+            <c:forEach items="${producers}" var="producer">
+                <option value="${producer.id}">${producer.name}</option>
+            </c:forEach>
+        </select>
 
-        <spring:bind path="description">
-            <div class="form-group ${status.error ? 'has-error' : ''}">
-                <form:input title="Description" type="text" path="description" class="form-control"
-                            placeholder="Description"></form:input>
-                <form:errors title="Description Errors" path="description"></form:errors>
-            </div>
-        </spring:bind>
+        <select name="idCategory" id="category">
+            <c:forEach items="${categories}" var="category">
+                <option value="${category.id}">${category.name}</option>
+            </c:forEach>
+        </select>
+
+        <div class="form-group">
+            <label for="model">Model</label>
+            <input title="model" type="text" id="model" placeholder="Model" class="form-control"
+                   name="model">
+        </div>
+
+        <div class="form-group">
+            <label for="price">Price</label>
+            <input title="price" type="text" id="price" class="form-control" name="price" placeholder="Price">
+        </div>
+
+        <div class="form-group">
+            <label for="description">Description</label>
+            <input title="description" type="text" id="description" placeholder="Description" class="form-control"
+                   name="description">
+        </div>
 
         <div>
-            <button type="submit" class="btn btn-primary">Add product</button>
+            <button onclick="document.forms['createForm'].submit()" class="btn btn-primary">Confirm</button>
             <a href="/shop/welcome" class="btn btn-outline-secondary">Back</a>
         </div>
+
     </form:form>
 
-
 </div>
+
 </body>
 </html>

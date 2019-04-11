@@ -8,7 +8,7 @@ import java.util.List;
 
 public interface ProductService {
 
-    void addProduct(Product product, Category category, Producer producer);
+    void addProduct(Product product);
 
     Product findProductById(Long id);
 

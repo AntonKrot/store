@@ -8,7 +8,7 @@ CREATE TABLE users
   lastname  VARCHAR(64)  NOT NULL,
   email     VARCHAR(64)  NOT NULL,
   address   VARCHAR(64)  NOT NULL,
-  phone     VARCHAR(32)  NOT NULL
+  phone     INT(9)       NOT NULL
 )
 ;
 
@@ -41,19 +41,20 @@ CREATE TABLE categories
 -- Table: orders
 CREATE TABLE orders
 (
-  id        INT          NOT NULL AUTO_INCREMENT PRIMARY KEY,
-  user_id   INT          NOT NULL,
-  status_id INT          NOT NULL,
-  comment   VARCHAR(1000),
-  address   VARCHAR(120) NOT NULL,
-  phone     VARCHAR(9)   NOT NULL,
-  date      DATETIME     NOT NULL
+  id          INT          NOT NULL AUTO_INCREMENT PRIMARY KEY,
+  user_id     INT          NOT NULL,
+  status_id   INT          NOT NULL,
+  total_price DOUBLE       NOT NULL,
+  comment     VARCHAR(1000),
+  address     VARCHAR(120) NOT NULL,
+  phone       INT(9)       NOT NULL,
+  date        DATETIME     NOT NULL
 );
 
 -- Table: status
 CREATE TABLE status
 (
-  id INT NOT NULL  AUTO_INCREMENT PRIMARY KEY,
+  id     INT          NOT NULL AUTO_INCREMENT PRIMARY KEY,
   status VARCHAR(255) NOT NULL
 );
 
@@ -68,10 +69,11 @@ CREATE TABLE producers
 CREATE TABLE products
 (
   id          INT          NOT NULL AUTO_INCREMENT PRIMARY KEY,
+  picture     BLOB,
   category_id INT          NOT NULL,
   producer_id INT          NOT NULL,
   model       VARCHAR(64)  NOT NULL,
-  price       VARCHAR(32)  NOT NULL,
+  price       DOUBLE       NOT NULL,
   description VARCHAR(256) NOT NULL,
 
   FOREIGN KEY (category_id) REFERENCES categories (id),
@@ -93,7 +95,7 @@ CREATE TABLE product_orders
 
 INSERT INTO users
 VALUES (1, 'admin', '$2a$10$CLqxLnm6Brrs39Qae2vOs.cU8BW9/h2f3szZAG4ZzbsUUkdu3r3Z2', 'admin', 'admin', 'admin@email.com',
-        'admin_address', '7788');
+        'admin_address', 7788);
 
 INSERT INTO roles
 VALUES (1, 'ROLE_USER');
@@ -118,11 +120,11 @@ INSERT INTO producers
 VALUES (3, 'samsung');
 
 INSERT INTO products
-VALUES (1, 1, 1, 'first notebook model', '100$', 'this is notebook');
+VALUES (1, NULL, 1, 1, 'first notebook model', 100, 'this is notebook');
 INSERT INTO products
-VALUES (2, 2, 2, 'first smartphone model', '200$', 'this is smartphone');
+VALUES (2, NULL, 2, 2, 'first smartphone model', 100, 'this is smartphone');
 INSERT INTO products
-VALUES (3, 3, 3, 'first tablet model', '300$', 'this is tablet');
+VALUES (3, NULL, 3, 3, 'first tablet model', 100, 'this is tablet');
 
 INSERT INTO status
 VALUES (1, 'accepted');
@@ -131,4 +133,4 @@ VALUES (2, 'processing');
 INSERT INTO status
 VALUES (3, 'canceled');
 INSERT INTO status
-VALUES (4,'filling');
+VALUES (4, 'filling');

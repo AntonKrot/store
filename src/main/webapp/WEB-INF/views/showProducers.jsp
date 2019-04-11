@@ -5,10 +5,9 @@
 
 <c:set var="contextPath" value="${pageContext.request.contextPath}"/>
 
-<!DOCTYPE html>
-<html lang="en">
+<html>
 <head>
-    <title>All product</title>
+    <title>All producers</title>
 </head>
 <body>
 
@@ -18,23 +17,17 @@
     <table class="table table-bordered text-center">
         <thead class="thead-dark">
         <tr>
-            <th scope="col">model</th>
-            <th scope="col">description</th>
-            <th scope="col">price</th>
-            <th scope="col">producer</th>
+            <th scope="col">name</th>
             <th scope="col"></th>
             <th scope="col"></th>
         </tr>
         </thead>
         <tbody>
-        <c:forEach var="list" items="${products}">
+        <c:forEach var="list" items="${producers}">
             <tr>
-                <td>${list.model}</td>
-                <td>${list.description}</td>
-                <td>${list.price}</td>
-                <td>${list.producer}</td>
-                <td><a href="/shop/basket/add/${list.id}" class="btn btn-outline-danger">Basket</a></td>
-                <td><a href="/shop/product/delete/${list.id}" class="btn btn-outline-danger">Delete</a></td> <%--ERROR--%>
+                <td>${list.name}</td>
+                <td><a href="/shop/producer/edit/${list.id}" class="btn btn-outline-primary">Edit</a></td>
+                <td><a href="/shop/producer/delete/${list.id}" class="btn btn-outline-danger">Delete</a></td>
             </tr>
         </c:forEach>
         </tbody>

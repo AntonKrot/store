@@ -11,8 +11,8 @@ import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestMethod;
 
+import java.util.ArrayList;
 import java.util.Date;
-import java.util.HashSet;
 import java.util.List;
 
 /**
@@ -53,10 +53,11 @@ public class BasketController {
         if (order != null) {
             Product product = productService.findProductById(id);
             order.getProducts().add(product);
+            order.setTotalPrice();
             orderService.updateOrder(order);
         } else {
             order = new Order();
-            HashSet<Product> products = new HashSet<>();
+            List<Product> products = new ArrayList<>();
             products.add(productService.findProductById(id));
             order.setProducts(products);
             order.setStatus(statusService.findStatusById(4L));
@@ -64,6 +65,7 @@ public class BasketController {
             order.setAddress(userService.findById(securityService.getCurrentUserId()).getAddress());
             order.setPhone(userService.findById(securityService.getCurrentUserId()).getPhone());
             order.setDate(new Date());
+            order.setTotalPrice();
             statusService.findStatusById(4L).getOrders().add(order);
             orderService.addOrder(order);
         }
