@@ -6,6 +6,8 @@
 <body>
 
 <jsp:include page=".jsp"/>
+<jsp:include page="sideBar.jsp"/>
+<jsp:include page="navBar.jsp"/>
 
 <div class="container">
     <form id="category" class="form-signin" method="POST" action="/shop/category/edit">

@@ -10,10 +10,10 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
 import org.springframework.validation.BindingResult;
-import org.springframework.web.bind.annotation.ModelAttribute;
-import org.springframework.web.bind.annotation.PathVariable;
-import org.springframework.web.bind.annotation.RequestMapping;
-import org.springframework.web.bind.annotation.RequestMethod;
+import org.springframework.web.bind.annotation.*;
+
+import static org.springframework.web.bind.annotation.RequestMethod.GET;
+import static org.springframework.web.bind.annotation.RequestMethod.POST;
 
 /**
  * Controller for {@link by.krot.mvc.model.User}'s pages.
@@ -37,14 +37,14 @@ public class UserController {
     @Autowired
     CategoryService categoryService;
 
-    @RequestMapping(value = "/registration", method = RequestMethod.GET)
+    @RequestMapping(value = "/registration", method = GET)
     public String registration(Model model) {
         model.addAttribute("userForm", new User());
 
         return "registration";
     }
 
-    @RequestMapping(value = "/registration", method = RequestMethod.POST)
+    @RequestMapping(value = "/registration", method = POST)
     public String registration(@ModelAttribute("userForm") User userForm, BindingResult bindingResult, Model model) {
         userValidator.validate(userForm, bindingResult);
 
@@ -59,7 +59,7 @@ public class UserController {
         return "redirect:/welcome";
     }
 
-    @RequestMapping(value = "/login", method = RequestMethod.GET)
+    @RequestMapping(value = "/login", method = GET)
     public String login(Model model, String error, String logout) {
 
         if (error != null) {
@@ -75,46 +75,53 @@ public class UserController {
     }
 
 
-    @RequestMapping(value = {"/admin"}, method = RequestMethod.GET)
+    @RequestMapping(value = {"/admin"}, method = GET)
     public String admin(Model model) {
         return "admin";
     }
 
 
-    @RequestMapping(value = "/users", method = RequestMethod.GET)
+    @RequestMapping(value = "/users", method = GET)
     public String showUser(Model model) {
         model.addAttribute("users", userService.findAllUsers());
         return "showUsers";
     }
 
-    @RequestMapping(value = "/delete/{id}", method = RequestMethod.GET)
+    @RequestMapping(value = "/delete/{id}", method = GET)
     public String deleteUserById(@PathVariable("id") Long id) {
         userService.deleteUser(id);
         return "redirect:/login";
     }
 
-    @RequestMapping(value = "/update/{id}", method = RequestMethod.GET)
+    @RequestMapping(value = "/update/{id}", method = GET)
     public String updateUserById(@PathVariable("id") Long id, Model model) {
         model.addAttribute("user", userService.findById(id));
         return "editUser";
     }
 
-    @RequestMapping(value = "/update", method = RequestMethod.POST)
+    @RequestMapping(value = "/update", method = POST)
     public String update(@ModelAttribute("user") User user) {
         userService.updateUser(user);
         return "redirect:/welcome";
     }
 
-    @RequestMapping(value = "/role/{id}", method = RequestMethod.GET)
+    @RequestMapping(value = "/role/{id}", method = GET)
     public String addAdminRole(@PathVariable("id") Long id) {
         userService.giveAdminRole(userService.findById(id));
         return "redirect:/users";
     }
 
-    @RequestMapping(value = {"/", "/welcome"}, method = RequestMethod.GET)
+    @RequestMapping(value = {"/", "/welcome"}, method = GET)
     public String welcome(Model model) {
         model.addAttribute("categories", categoryService.findAllCategory());
         return "welcome";
+    }
+
+    @RequestMapping(value = "/user/{id}", method = GET)
+    public String informationAboutUser(@PathVariable("id") Long id, Model model, @RequestParam("path") String path) {
+        model.addAttribute("path", path);
+        model.addAttribute("user", userService.findById(id));
+        return "showInformationAboutUser";
     }
 }
 

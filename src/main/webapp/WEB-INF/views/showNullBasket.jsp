@@ -7,15 +7,21 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-     <title>Basket</title>
+    <title>Basket</title>
 </head>
 <body>
 
 <jsp:include page=".jsp"/>
+<jsp:include page="sideBar.jsp"/>
+<jsp:include page="navBar.jsp"/>
 
-<div class="container">
-    <p class="text-center">Your basket is empty!</p>
-    <a href="/shop/welcome" class="btn btn-outline-secondary">Back</a>
+<div class="container my-4">
+    <div class="container">
+        <div class="container  jumbotron">
+            <h1 class="text-center">Your basket is empty!</h1>
+            <a href="/shop/welcome" class="btn btn-outline-secondary">Back</a>
+        </div>
+    </div>
 </div>
 
 </body>

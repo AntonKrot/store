@@ -1,14 +1,8 @@
 <%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core" %>
-<%@ taglib prefix="spring" uri="http://www.springframework.org/tags" %>
-<%@ taglib prefix="form" uri="http://www.springframework.org/tags/form" %>
 <%@ page contentType="text/html;charset=UTF-8" language="java" %>
-
-<c:set var="contextPath" value="${pageContext.request.contextPath}"/>
-
-<!DOCTYPE html>
-<html lang="en">
+<html>
 <head>
-    <title>Orders</title>
+    <title>Order story</title>
 </head>
 <body>
 
@@ -16,8 +10,8 @@
 <jsp:include page="sideBar.jsp"/>
 <jsp:include page="navBar.jsp"/>
 
-
 <div class="container">
+
     <table class="table table-bordered text-center">
         <thead class="thead-light">
         <tr>
@@ -26,37 +20,40 @@
             <th scope="col">Date of order</th>
             <th scope="col">Total price</th>
             <th scope="col">Comment</th>
-            <th scope="col"></th>
+            <th scope="col">Status</th>
+            <th scope="col">Status</th>
         </tr>
         </thead>
         <tbody>
-        <tr>
-            <c:forEach var="order" items="${orders}">
-                <td>${order.id}</td>
-                <td>
-                    <form id="informationAboutUser" method="GET" action="/shop/user/${order.user.id}">
-                        <input type="hidden" name="path" value="/shop/basket/orders"/>
-                    </form>
-                    <a onclick="document.forms['informationAboutUser'].submit() " class="btn btn-link">${order.user.username}</a>
+        <c:forEach var="order" items="${orders}">
+            <tr>
 
-                </td>
+                <td>${order.id}</td>
+                <td>${order.user.username}</td>
                 <td>${order.date}</td>
                 <td>${order.totalPrice}</td>
                 <td>${order.comment}</td>
                 <td>
+                    <c:choose>
+                        <c:when test="${order.status.id eq 1}">Success</c:when>
+                        <c:when test="${order.status.id eq 3}">Cancel</c:when>
+                        <c:when test="${order.status.id eq 2}">Processing</c:when>
+                        <c:when test="${order.status.id eq 4}">Filling</c:when>
+                    </c:choose>
+                </td>
+                <td>
                     <form id="story" method="GET" action="/shop/basket/order/${order.id}">
-                        <input type="hidden" name="path" value="/shop/basket/orders"/>
+                        <input type="hidden" name="path" value="/shop/basket/story/${order.id}"/>
                     </form>
                     <a onclick="document.forms['story'].submit()" class="btn btn-outline-success">More</a>
-
-                    <a href="/shop/basket/accept/order/${order.id}" class="btn btn-outline-primary">Accept</a>
-                    <a href="/shop/basket/cancel/order/${order.id}" class="btn btn-outline-danger">Cancel</a>
                 </td>
-            </c:forEach>
-        </tr>
+            </tr>
+        </c:forEach>
         </tbody>
     </table>
+
     <a href="/shop/welcome" class="btn btn-outline-secondary">Back</a>
 </div>
+
 </body>
 </html>

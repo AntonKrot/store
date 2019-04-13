@@ -57,7 +57,7 @@ public class OrderDaoImpl implements OrderDao {
         TypedQuery<Order> q = entityManager.createQuery("SELECT o FROM Order o WHERE o.user = :user",
                 Order.class);
         q.setParameter("user", userDao.getOne(userId));
-        return (List<Order>) q.getResultList().stream().findAny().orElse(null);
+        return (List<Order>) q.getResultList();
     }
 
     @Override

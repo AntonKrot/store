@@ -10,6 +10,8 @@
 <body>
 
 <jsp:include page=".jsp"/>
+<jsp:include page="sideBar.jsp"/>
+<jsp:include page="navBar.jsp"/>
 
 <div class="container">
     <h2 class="form-heading text-center mt-5 mb-4">Add producer</h2>

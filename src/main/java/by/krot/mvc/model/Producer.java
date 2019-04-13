@@ -17,7 +17,7 @@ public class Producer {
     private Long id;
     @Column(name = "name", unique = true, nullable = false)
     private String name;
-    @OneToMany(mappedBy = "producer",cascade = CascadeType.ALL, fetch=FetchType.EAGER)
+    @OneToMany(mappedBy = "producer",cascade = CascadeType.ALL, fetch=FetchType.EAGER, orphanRemoval = true)
     private Set<Product> products = new HashSet<>();
 
     public Long getId() {

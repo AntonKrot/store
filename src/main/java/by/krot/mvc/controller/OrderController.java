@@ -6,14 +6,13 @@ import by.krot.mvc.service.*;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
-import org.springframework.web.bind.annotation.ModelAttribute;
-import org.springframework.web.bind.annotation.PathVariable;
-import org.springframework.web.bind.annotation.RequestMapping;
-import org.springframework.web.bind.annotation.RequestMethod;
+import org.springframework.web.bind.annotation.*;
 
 import java.util.ArrayList;
 import java.util.Date;
 import java.util.List;
+
+import static org.springframework.web.bind.annotation.RequestMethod.GET;
 
 /**
  * Controller for {@link by.krot.mvc.model.Order}'s pages.
@@ -24,7 +23,7 @@ import java.util.List;
 
 @Controller
 @RequestMapping("basket")
-public class BasketController {
+public class OrderController {
 
     @Autowired
     UserService userService;
@@ -47,7 +46,7 @@ public class BasketController {
     @Autowired
     StatusService statusService;
 
-    @RequestMapping(value = "add/{id}", method = RequestMethod.GET)
+    @RequestMapping(value = "add/{id}", method = GET)
     String addToOrder(@PathVariable("id") Long id) {
         Order order = orderService.findOrderByStatusAndUserId(4L, securityService.getCurrentUserId());
         if (order != null) {
@@ -72,7 +71,7 @@ public class BasketController {
         return "redirect:/welcome";
     }
 
-    @RequestMapping(value = "/", method = RequestMethod.GET)
+    @RequestMapping(value = "/", method = GET)
     String showBasket(Model model) {
         Order order = orderService.findOrderByStatusAndUserId(4L, securityService.getCurrentUserId());
         if (order == null) {
@@ -95,7 +94,7 @@ public class BasketController {
         return "redirect:/welcome";
     }
 
-    @RequestMapping(value = "/orders", method = RequestMethod.GET)
+    @RequestMapping(value = "/orders", method = GET)
     String allOrders(Model model) {
         List<Order> orders = orderService.findAllOrdersByStatus(2L);
         if (orders.isEmpty()) {
@@ -105,7 +104,7 @@ public class BasketController {
         return "showOrders";
     }
 
-    @RequestMapping(value = "/cancel/{id}", method = RequestMethod.GET)
+    @RequestMapping(value = "/cancel/{id}", method = GET)
     String cancelProduct(@PathVariable("id") Long productId) {
         Order order = orderService.findOrderByStatusAndUserId(4L, securityService.getCurrentUserId());
         Product product = productService.findProductById(productId);
@@ -114,7 +113,7 @@ public class BasketController {
         return "redirect:/welcome";
     }
 
-    @RequestMapping(value = "/accept/order/{id}", method = RequestMethod.GET)
+    @RequestMapping(value = "/accept/order/{id}", method = GET)
     String acceptOrder(@PathVariable("id") Long id) {
         Order order = orderService.findOrderById(id);
         order.setStatus(statusService.findStatusById(1L));
@@ -122,7 +121,7 @@ public class BasketController {
         return "redirect:/basket/orders";
     }
 
-    @RequestMapping(value = "/cancel/order/{id}", method = RequestMethod.GET)
+    @RequestMapping(value = "/cancel/order/{id}", method = GET)
     String cancelOrder(@PathVariable("id") Long id) {
         Order order = orderService.findOrderById(id);
         order.setStatus(statusService.findStatusById(3L));
@@ -130,4 +129,18 @@ public class BasketController {
         return "redirect:/basket/orders";
     }
 
+    @RequestMapping(value = "/order/{id}", method = GET)
+    String getInformationAboutOrder(@PathVariable("id") Long id, @RequestParam("path") String path, Model model) {
+        model.addAttribute("order", orderService.findOrderById(id));
+        model.addAttribute("path", path);
+
+        return "showInformationAboutOrder";
+    }
+
+    @RequestMapping(value = "/story/{id}", method = GET)
+    String showOrderStory(@PathVariable("id") Long id, Model model) {
+
+        model.addAttribute("orders", orderService.findAllUserOrders(id));
+        return "showOrderStory";
+    }
 }

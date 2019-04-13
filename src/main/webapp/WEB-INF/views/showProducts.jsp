@@ -13,6 +13,8 @@
 <body>
 
 <jsp:include page=".jsp"/>
+<jsp:include page="sideBar.jsp"/>
+<jsp:include page="navBar.jsp"/>
 
 <div class="container">
     <table class="table table-bordered text-center">
@@ -22,6 +24,7 @@
             <th scope="col">description</th>
             <th scope="col">price</th>
             <th scope="col">producer</th>
+            <th scope="col">picture</th>
             <th scope="col"></th>
             <th scope="col"></th>
         </tr>
@@ -33,8 +36,9 @@
                 <td>${list.description}</td>
                 <td>${list.price}</td>
                 <td>${list.producer}</td>
-                <td><a href="/shop/basket/add/${list.id}" class="btn btn-outline-danger">Basket</a></td>
-                <td><a href="/shop/product/delete/${list.id}" class="btn btn-outline-danger">Delete</a></td> <%--ERROR--%>
+                <td><img src="/shop/product/imageDisplay?id=${list.id}"  width="200" height="200" /></td>
+                <td><a href="/shop/basket/add/${list.id}" class="btn btn-outline-primary">Basket</a></td>
+                <td><a href="/shop/product/delete/${list.id}" class="btn btn-outline-secondary">Delete</a></td> <%--ERROR--%>
             </tr>
         </c:forEach>
         </tbody>

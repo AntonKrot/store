@@ -1260,7 +1260,7 @@
     </column>
     <column id="314" parent="287" name="picture">
       <Position>2</Position>
-      <DataType>blob|0s</DataType>
+      <DataType>longblob|0s</DataType>
       <ColumnKind>normal</ColumnKind>
     </column>
     <column id="315" parent="287" name="category_id">

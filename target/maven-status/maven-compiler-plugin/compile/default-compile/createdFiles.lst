@@ -2,11 +2,11 @@ by\krot\mvc\dao\impl\OrderDaoImpl.class
 by\krot\mvc\service\UserService.class
 by\krot\mvc\dao\OrderDao.class
 by\krot\mvc\model\Category.class
+by\krot\mvc\controller\OrderController.class
 by\krot\mvc\dao\RoleDao.class
 by\krot\mvc\service\impl\UserServiceImpl.class
 by\krot\mvc\service\ProductService.class
 by\krot\mvc\service\impl\CategoryServiceImpl.class
-by\krot\mvc\controller\BasketController.class
 by\krot\mvc\model\Status.class
 by\krot\mvc\model\Order.class
 by\krot\mvc\controller\UserController.class

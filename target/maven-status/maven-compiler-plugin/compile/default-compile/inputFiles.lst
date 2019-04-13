@@ -1,4 +1,5 @@
 D:\Projects\Новая папка\store\src\main\java\by\krot\mvc\controller\ProductController.java
+D:\Projects\Новая папка\store\src\main\java\by\krot\mvc\controller\OrderController.java
 D:\Projects\Новая папка\store\src\main\java\by\krot\mvc\service\OrderService.java
 D:\Projects\Новая папка\store\src\main\java\by\krot\mvc\dao\StatusDao.java
 D:\Projects\Новая папка\store\src\main\java\by\krot\mvc\dao\ProductDao.java
@@ -18,7 +19,6 @@ D:\Projects\Новая папка\store\src\main\java\by\krot\mvc\dao\CategoryDa
 D:\Projects\Новая папка\store\src\main\java\by\krot\mvc\model\User.java
 D:\Projects\Новая папка\store\src\main\java\by\krot\mvc\service\ProductService.java
 D:\Projects\Новая папка\store\src\main\java\by\krot\mvc\service\ProducerService.java
-D:\Projects\Новая папка\store\src\main\java\by\krot\mvc\ClientCode.java
 D:\Projects\Новая папка\store\src\main\java\by\krot\mvc\service\CategoryService.java
 D:\Projects\Новая папка\store\src\main\java\by\krot\mvc\model\Status.java
 D:\Projects\Новая папка\store\src\main\java\by\krot\mvc\model\Product.java
@@ -29,7 +29,6 @@ D:\Projects\Новая папка\store\src\main\java\by\krot\mvc\model\Role.jav
 D:\Projects\Новая папка\store\src\main\java\by\krot\mvc\dao\impl\OrderDaoImpl.java
 D:\Projects\Новая папка\store\src\main\java\by\krot\mvc\model\Order.java
 D:\Projects\Новая папка\store\src\main\java\by\krot\mvc\controller\UserController.java
-D:\Projects\Новая папка\store\src\main\java\by\krot\mvc\controller\BasketController.java
 D:\Projects\Новая папка\store\src\main\java\by\krot\mvc\controller\CategoryController.java
 D:\Projects\Новая папка\store\src\main\java\by\krot\mvc\dao\RoleDao.java
 D:\Projects\Новая папка\store\src\main\java\by\krot\mvc\dao\ProducerDao.java

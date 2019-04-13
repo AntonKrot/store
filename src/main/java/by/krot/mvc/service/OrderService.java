@@ -10,11 +10,11 @@ public interface OrderService {
 
     Order findOrderById(Long id);
 
-    List findAllUserOrders(Long id);
+    List<Order> findAllUserOrders(Long id);
 
     void addOrder(Order order);
 
     void updateOrder(Order order);
 
-    List findAllOrdersByStatus(Long id);
+    List<Order> findAllOrdersByStatus(Long id);
 }

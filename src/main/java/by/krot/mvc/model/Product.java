@@ -1,7 +1,10 @@
 package by.krot.mvc.model;
 
+import org.hibernate.engine.internal.Cascade;
+
 import javax.persistence.*;
 
+import java.util.Arrays;
 import java.util.Set;
 
 import static javax.persistence.GenerationType.AUTO;
@@ -98,9 +101,11 @@ public class Product {
 
     @Override
     public String toString() {
-        return "model='" + model + '\'' +
-                ", price='" + price + '\'' +
-                ", description='" + description;
+        return "Product{" +
+                ", picture=" + Arrays.toString(picture) +
+                ", model='" + model + '\'' +
+                ", price=" + price +
+                ", description='" + description + '\'' +
+                '}';
     }
-
 }

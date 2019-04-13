@@ -17,7 +17,7 @@ public class Category {
     private Long id;
     @Column(name = "name", unique = true, nullable = false)
     private String name;
-    @OneToMany(mappedBy = "category",cascade = CascadeType.ALL, fetch=FetchType.EAGER)
+    @OneToMany(mappedBy = "category",cascade = CascadeType.ALL, fetch=FetchType.EAGER, orphanRemoval = true)
     private Set<Product> products = new HashSet<>();
 
     public Long getId() {

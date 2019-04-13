@@ -69,7 +69,7 @@ CREATE TABLE producers
 CREATE TABLE products
 (
   id          INT          NOT NULL AUTO_INCREMENT PRIMARY KEY,
-  picture     BLOB,
+  picture     LONGBLOB,
   category_id INT          NOT NULL,
   producer_id INT          NOT NULL,
   model       VARCHAR(64)  NOT NULL,

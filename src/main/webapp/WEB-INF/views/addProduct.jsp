@@ -2,34 +2,33 @@
 <%@ taglib prefix="spring" uri="http://www.springframework.org/tags" %>
 <%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core" %>
 <%@ taglib prefix="from" uri="http://www.springframework.org/tags/form" %>
+<%@ taglib prefix="th" uri="http://www.springframework.org/tags/form" %>
 <%@ page contentType="text/html;charset=UTF-8" language="java" %>
 <c:set var="contextPath" value="${pageContext.request.contextPath}"/>
 <html>
 <head>
     <title>Title</title>
+    <meta name="_csrf_parameter" content="_csrf" />
+    <meta name="_csrf_header" content="X-CSRF-TOKEN" />
+    <meta name="_csrf" content="e62835df-f1a0-49ea-bce7-bf96f998119c" />
 </head>
 <body>
 
 <jsp:include page=".jsp"/>
+<jsp:include page="sideBar.jsp"/>
+<jsp:include page="navBar.jsp"/>
 
 <div class="container">
-    <form:form methodParam="product" id="createForm" class="form-signin" method="POST" action="/shop/product/add">
+    <form:form methodParam="product" id="createForm" class="form-signin" method="POST" action="/shop/product/add" enctype="multipart/form-data" >
 
-        <input type="hidden" name="${_csrf.parameterName}" value="${_csrf.token}"/>
+        <%--<input type="hidden" th:name="${_csrf.parameterName}" th:value="${_csrf.token}"/>--%>
 
         <h2 class="form-heading text-center mt-2 mb-4">Add product</h2>
 
-
-        <%--<select name="category" id="category">--%>
-        <%--<c:forEach items="${categories}" var="category">--%>
-        <%--<option value="${category}">${category.name}</option>--%>
-        <%--</c:forEach>--%>
-        <%--</select>--%>
-
-        <%--<form:select path="category">--%>
-        <%--<form:options items="categories"/>--%>
-        <%--</form:select>--%>
-
+        <div class="custom-file" >
+            <input class="custom-file-input" id="file" type="file" required="required" name="file">
+            <label class="custom-file-label" for="file">Choose file</label>
+        </div>
 
         <select name="idProducer" id="producer">
             <c:forEach items="${producers}" var="producer">
