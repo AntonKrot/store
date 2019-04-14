@@ -1,8 +1,10 @@
 package by.krot.mvc.controller;
 
 
+import by.krot.mvc.model.CategoryStatus;
 import by.krot.mvc.model.User;
 import by.krot.mvc.service.CategoryService;
+import by.krot.mvc.service.CategoryStatusService;
 import by.krot.mvc.service.SecurityService;
 import by.krot.mvc.service.UserService;
 import by.krot.mvc.validator.UserValidator;
@@ -36,6 +38,9 @@ public class UserController {
 
     @Autowired
     CategoryService categoryService;
+
+    @Autowired
+    CategoryStatusService categoryStatusService;
 
     @RequestMapping(value = "/registration", method = GET)
     public String registration(Model model) {
@@ -113,7 +118,8 @@ public class UserController {
 
     @RequestMapping(value = {"/", "/welcome"}, method = GET)
     public String welcome(Model model) {
-        model.addAttribute("categories", categoryService.findAllCategory());
+        model.addAttribute("categories",
+                categoryService.findAllByStatus(categoryStatusService.findStatusById(1L)));
         return "welcome";
     }
 

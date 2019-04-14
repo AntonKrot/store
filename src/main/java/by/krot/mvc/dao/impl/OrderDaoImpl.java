@@ -1,10 +1,10 @@
 package by.krot.mvc.dao.impl;
 
 import by.krot.mvc.dao.OrderDao;
-import by.krot.mvc.dao.StatusDao;
+import by.krot.mvc.dao.OrderStatusDao;
 import by.krot.mvc.dao.UserDao;
 import by.krot.mvc.model.Order;
-import by.krot.mvc.model.Status;
+import by.krot.mvc.model.OrderStatus;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Component;
 import org.springframework.transaction.annotation.Transactional;
@@ -22,16 +22,16 @@ public class OrderDaoImpl implements OrderDao {
     private EntityManager entityManager;
 
     @Autowired
-    StatusDao statusDao;
+    OrderStatusDao orderStatusDao;
 
     @Autowired
     UserDao userDao;
 
     @Override
     public List<Order> findAllOrdersByStatus(Long id) {
-        TypedQuery<Order> q = entityManager.createQuery("SELECT o FROM Order o  where o.status = ?1",
+        TypedQuery<Order> q = entityManager.createQuery("SELECT o FROM Order o  WHERE o.status = ?1",
                 Order.class);
-        q.setParameter(1, statusDao.getOne(id));
+        q.setParameter(1, orderStatusDao.getOne(id));
         return q.getResultList();
     }
 
@@ -39,7 +39,7 @@ public class OrderDaoImpl implements OrderDao {
     public Order findOrderByStatusAndUserId(Long statusId, Long userId) {
         TypedQuery<Order> q = entityManager.createQuery("SELECT o FROM Order o WHERE o.status = ?1 AND o.user = ?2",
                 Order.class);
-        q.setParameter(1, statusDao.getOne(statusId));
+        q.setParameter(1, orderStatusDao.getOne(statusId));
         q.setParameter(2, userDao.getOne(userId));
         return q.getResultList().stream().findAny().orElse(null);
     }

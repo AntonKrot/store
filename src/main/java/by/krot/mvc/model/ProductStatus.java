@@ -1,35 +1,24 @@
 package by.krot.mvc.model;
 
-import org.springframework.transaction.annotation.Transactional;
-
 import javax.persistence.*;
+
 import java.util.HashSet;
 import java.util.Set;
 
 import static javax.persistence.GenerationType.AUTO;
 
 @Entity
-@Table(name = "categories")
-public class Category {
+@Table(name = "status_product")
+public class ProductStatus {
+
     @Id
     @GeneratedValue(strategy = AUTO)
     @Column(name = "id", unique = true, nullable = false)
     private Long id;
-    @Column(name = "name", unique = true, nullable = false)
+    @Column(name = "status", unique = true, nullable = false)
     private String name;
-    @OneToMany(mappedBy = "category", cascade = CascadeType.ALL, fetch = FetchType.EAGER, orphanRemoval = true)
+    @OneToMany(mappedBy = "status", cascade = CascadeType.ALL, fetch = FetchType.EAGER)
     private Set<Product> products = new HashSet<>();
-    @ManyToOne
-    @JoinColumn(name = "status_id")
-    private CategoryStatus status;
-
-    public CategoryStatus getStatus() {
-        return status;
-    }
-
-    public void setStatus(CategoryStatus status) {
-        this.status = status;
-    }
 
     public Long getId() {
         return id;
@@ -59,5 +48,4 @@ public class Category {
     public String toString() {
         return name;
     }
-
 }

@@ -1,3 +1,4 @@
+<%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core" %>
 <%@ page contentType="text/html;charset=UTF-8" language="java" %>
 <html>
 <head>
@@ -21,6 +22,13 @@
             <input title="name" type="text" id="name" placeholder="Name" class="form-control" name="name"
                    value="${category.name}">
         </div>
+
+        <select name="idStatus" id="status" class="custom-select">
+            <option selected>Choose a status</option>
+            <c:forEach items="${status}" var="status">
+                <option value="${status.id}">${status.name}</option>
+            </c:forEach>
+        </select>
 
         <div>
             <button onclick="document.forms['updateForm'].submit()" class="btn btn-primary">Confirm</button>

@@ -27,6 +27,12 @@
             </div>
         </spring:bind>
 
+        <select name="idStatus" id="status" class="custom-select">
+            <option selected>Choose a status</option>
+            <c:forEach items="${status}" var="status">
+                <option value="${status.id}">${status.name}</option>
+            </c:forEach>
+        </select>
 
         <div>
             <button type="submit" class="btn btn-primary">Add category</button>

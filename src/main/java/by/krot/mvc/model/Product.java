@@ -1,6 +1,5 @@
 package by.krot.mvc.model;
 
-import org.hibernate.engine.internal.Cascade;
 
 import javax.persistence.*;
 
@@ -30,10 +29,21 @@ public class Product {
     @JoinColumn(name = "category_id", nullable = false)
     private Category category;
     @ManyToOne
+    @JoinColumn(name = "status_id")
+    private ProductStatus status;
+    @ManyToOne
     @JoinColumn(name = "producer_id", nullable = false)
     private Producer producer;
     @ManyToMany
     private Set<Order> orders;
+
+    public ProductStatus getStatus() {
+        return status;
+    }
+
+    public void setStatus(ProductStatus status) {
+        this.status = status;
+    }
 
     public Set<Order> getOrders() {
         return orders;

@@ -44,7 +44,7 @@ public class OrderController {
     OrderService orderService;
 
     @Autowired
-    StatusService statusService;
+    OrderStatusService orderStatusService;
 
     @RequestMapping(value = "add/{id}", method = GET)
     String addToOrder(@PathVariable("id") Long id) {
@@ -59,13 +59,13 @@ public class OrderController {
             List<Product> products = new ArrayList<>();
             products.add(productService.findProductById(id));
             order.setProducts(products);
-            order.setStatus(statusService.findStatusById(4L));
+            order.setStatus(orderStatusService.findStatusById(4L));
             order.setUser(userService.findById(securityService.getCurrentUserId()));
             order.setAddress(userService.findById(securityService.getCurrentUserId()).getAddress());
             order.setPhone(userService.findById(securityService.getCurrentUserId()).getPhone());
             order.setDate(new Date());
             order.setTotalPrice();
-            statusService.findStatusById(4L).getOrders().add(order);
+            orderStatusService.findStatusById(4L).getOrders().add(order);
             orderService.addOrder(order);
         }
         return "redirect:/welcome";
@@ -88,7 +88,7 @@ public class OrderController {
         order.setAddress(data.getAddress());
         order.setPhone(data.getPhone());
         order.setComment(data.getComment());
-        order.setStatus(statusService.findStatusById(2L));
+        order.setStatus(orderStatusService.findStatusById(2L));
         order.setDate(new Date());
         orderService.updateOrder(order);
         return "redirect:/welcome";
@@ -116,7 +116,7 @@ public class OrderController {
     @RequestMapping(value = "/accept/order/{id}", method = GET)
     String acceptOrder(@PathVariable("id") Long id) {
         Order order = orderService.findOrderById(id);
-        order.setStatus(statusService.findStatusById(1L));
+        order.setStatus(orderStatusService.findStatusById(1L));
         orderService.updateOrder(order);
         return "redirect:/basket/orders";
     }
@@ -124,7 +124,7 @@ public class OrderController {
     @RequestMapping(value = "/cancel/order/{id}", method = GET)
     String cancelOrder(@PathVariable("id") Long id) {
         Order order = orderService.findOrderById(id);
-        order.setStatus(statusService.findStatusById(3L));
+        order.setStatus(orderStatusService.findStatusById(3L));
         orderService.updateOrder(order);
         return "redirect:/basket/orders";
     }

@@ -8,8 +8,8 @@ import java.util.Set;
 import static javax.persistence.GenerationType.AUTO;
 
 @Entity
-@Table(name = "status")
-public class Status {
+@Table(name = "status_order")
+public class OrderStatus {
 
     @Id
     @GeneratedValue(strategy = AUTO)

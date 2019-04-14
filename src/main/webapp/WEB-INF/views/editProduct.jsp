@@ -4,13 +4,9 @@
 <%@ taglib prefix="from" uri="http://www.springframework.org/tags/form" %>
 <%@ taglib prefix="th" uri="http://www.springframework.org/tags/form" %>
 <%@ page contentType="text/html;charset=UTF-8" language="java" %>
-<c:set var="contextPath" value="${pageContext.request.contextPath}"/>
 <html>
 <head>
-    <title>Title</title>
-    <meta name="_csrf_parameter" content="_csrf" />
-    <meta name="_csrf_header" content="X-CSRF-TOKEN" />
-    <meta name="_csrf" content="e62835df-f1a0-49ea-bce7-bf96f998119c" />
+    <title>Edit product</title>
 </head>
 <body>
 
@@ -19,13 +15,11 @@
 <jsp:include page="navBar.jsp"/>
 
 <div class="container">
-    <form:form methodParam="product" id="createForm" class="form-signin" method="POST" action="/shop/product/add" enctype="multipart/form-data" >
+    <form:form methodParam="newProduct" id="editForm" class="form-signin" method="POST" action="/shop/product/edit"
+               enctype="multipart/form-data">
 
-        <%--<input type="hidden" th:name="${_csrf.parameterName}" th:value="${_csrf.token}"/>--%>
 
-        <h2 class="form-heading text-center mt-2 mb-4">Add product</h2>
-
-        <div class="custom-file" >
+        <div class="custom-file">
             <input class="custom-file-input" id="file" type="file" required="required" name="file">
             <label class="custom-file-label" for="file">Choose file</label>
         </div>
@@ -54,23 +48,25 @@
         <div class="form-group">
             <label for="model">Model</label>
             <input title="model" type="text" id="model" placeholder="Model" class="form-control"
-                   name="model">
+                   name="model" value="${product.model}">
         </div>
 
         <div class="form-group">
             <label for="price">Price</label>
-            <input title="price" type="text" id="price" class="form-control" name="price" placeholder="Price">
+            <input title="price" type="text" id="price" class="form-control" name="price" placeholder="Price" value="${product.price}">
         </div>
 
         <div class="form-group">
             <label for="description">Description</label>
             <input title="description" type="text" id="description" placeholder="Description" class="form-control"
-                   name="description">
+                   name="description" value="${product.description}">
         </div>
 
+        <input type="hidden" title="id" type="text" name="id" value="${product.id}"/>
+
         <div>
-            <button onclick="document.forms['createForm'].submit()" class="btn btn-primary">Confirm</button>
-            <a href="/shop/welcome" class="btn btn-outline-secondary">Back</a>
+            <button onclick="document.forms['editForm'].submit()" class="btn btn-primary">Confirm</button>
+            <a href="/shop/product/all" class="btn btn-outline-secondary">Back</a>
         </div>
 
     </form:form>

@@ -6,7 +6,7 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-      <title>Welcome</title>
+    <title>Welcome</title>
 </head>
 <body>
 
@@ -41,12 +41,16 @@
         <form id="addProducer" method="GET" action="/shop/producer/add">
             <input type="hidden" name="${_csrf.parameterName}" value="${_csrf.token}"/>
         </form>
+        <form id="showProduct" method="GET" action="/shop/product/all">
+            <input type="hidden" name="${_csrf.parameterName}" value="${_csrf.token}"/>
+        </form>
         <h2>Welcome ${pageContext.request.userPrincipal.name} | <a onclick="document.forms['logoutForm'].submit()"
                                                                    class="btn btn-outline-info">Logout</a>
             <a onclick="document.forms['addProducer'].submit()" class="btn btn-outline-info">Add producer</a>
             <a onclick="document.forms['addProduct'].submit()" class="btn btn-outline-info">Add product</a>
             <a onclick="document.forms['addCategory'].submit()" class="btn btn-outline-info">Add category</a>
             <a onclick="document.forms['users'].submit()" class="btn btn-outline-info">Show users</a>
+            <a onclick="document.forms['showProduct'].submit()" class="btn btn-outline-info">Show all products</a>
             <a onclick="document.forms['basket'].submit()" class="btn btn-outline-info">Show basket</a>
             <a onclick="document.forms['showOrders'].submit()" class="btn btn-outline-info">Show orders</a>
             <a onclick="document.forms['showProducers'].submit()" class="btn btn-outline-info">Show producer</a>
@@ -61,14 +65,12 @@
         <tr>
             <th scope="col">Categories</th>
             <th scope="col"></th>
-            <th scope="col"></th>
         </tr>
         </thead>
         <tbody>
         <c:forEach var="list" items="${categories}">
             <tr>
                 <td><a href="product/category/${list.id}">${list.name}</a></td>
-                <td><a href="/shop/category/delete/${list.id}">Delete</a></td>
                 <td><a href="/shop/category/edit/${list.id}">Edit</a></td>
             </tr>
         </c:forEach>

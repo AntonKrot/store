@@ -2,12 +2,13 @@ package by.krot.mvc.service.impl;
 
 import by.krot.mvc.dao.CategoryDao;
 import by.krot.mvc.model.Category;
+import by.krot.mvc.model.CategoryStatus;
 import by.krot.mvc.service.CategoryService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
-import org.springframework.transaction.annotation.Transactional;
 
 import java.util.List;
+
 @Service
 public class CategoryServiceImpl implements CategoryService {
 
@@ -22,21 +23,21 @@ public class CategoryServiceImpl implements CategoryService {
     @Override
     public Category findCategoryById(Long id) {
         Category category = categoryDao.findOne(id);
-        return  category;
+        return category;
     }
 
     @Override
     public void updateCategory(Category category) {
-        categoryDao.save(category);
-    }
-
-    @Override
-    public void deleteCategoryById(Long id) {
-        categoryDao.delete(id);
+        categoryDao.update(category);
     }
 
     @Override
     public void addCategory(Category category) {
         categoryDao.save(category);
+    }
+
+    @Override
+    public List<Category> findAllByStatus(CategoryStatus categoryStatus) {
+        return categoryDao.findAllByStatus(categoryStatus);
     }
 }

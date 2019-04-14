@@ -34,8 +34,9 @@ CREATE TABLE user_roles
 -- Table: categories
 CREATE TABLE categories
 (
-  id   INT          NOT NULL AUTO_INCREMENT PRIMARY KEY,
-  name VARCHAR(100) NOT NULL
+  id        INT          NOT NULL AUTO_INCREMENT PRIMARY KEY,
+  status_id INT          NOT NULL,
+  name      VARCHAR(100) NOT NULL
 );
 
 -- Table: orders
@@ -51,8 +52,22 @@ CREATE TABLE orders
   date        DATETIME     NOT NULL
 );
 
--- Table: status
-CREATE TABLE status
+-- Table: status_order
+CREATE TABLE status_order
+(
+  id     INT          NOT NULL AUTO_INCREMENT PRIMARY KEY,
+  status VARCHAR(255) NOT NULL
+);
+
+-- Table: status_product
+CREATE TABLE status_product
+(
+  id     INT          NOT NULL AUTO_INCREMENT PRIMARY KEY,
+  status VARCHAR(255) NOT NULL
+);
+
+-- Table: status_category
+CREATE TABLE status_category
 (
   id     INT          NOT NULL AUTO_INCREMENT PRIMARY KEY,
   status VARCHAR(255) NOT NULL
@@ -72,6 +87,7 @@ CREATE TABLE products
   picture     LONGBLOB,
   category_id INT          NOT NULL,
   producer_id INT          NOT NULL,
+  status_id   INT          NOT NULL,
   model       VARCHAR(64)  NOT NULL,
   price       DOUBLE       NOT NULL,
   description VARCHAR(256) NOT NULL,
@@ -106,11 +122,11 @@ INSERT INTO user_roles
 VALUES (1, 2);
 
 INSERT INTO categories
-VALUES (1, 'notebook');
+VALUES (1, 1, 'notebook');
 INSERT INTO categories
-VALUES (2, 'smartphone');
+VALUES (2, 1, 'smartphone');
 INSERT INTO categories
-VALUES (3, 'tablet');
+VALUES (3, 1, 'tablet');
 
 INSERT INTO producers
 VALUES (1, 'asus');
@@ -120,17 +136,30 @@ INSERT INTO producers
 VALUES (3, 'samsung');
 
 INSERT INTO products
-VALUES (1, NULL, 1, 1, 'first notebook model', 100, 'this is notebook');
+VALUES (1, NULL, 1, 1, 1, 'first notebook model', 100, 'this is notebook');
 INSERT INTO products
-VALUES (2, NULL, 2, 2, 'first smartphone model', 100, 'this is smartphone');
+VALUES (2, NULL, 2, 2, 1, 'first smartphone model', 100, 'this is smartphone');
 INSERT INTO products
-VALUES (3, NULL, 3, 3, 'first tablet model', 100, 'this is tablet');
+VALUES (3, NULL, 3, 3, 1, 'first tablet model', 100, 'this is tablet');
 
-INSERT INTO status
+INSERT INTO status_order
 VALUES (1, 'accepted');
-INSERT INTO status
+INSERT INTO status_order
 VALUES (2, 'processing');
-INSERT INTO status
+INSERT INTO status_order
 VALUES (3, 'canceled');
-INSERT INTO status
+INSERT INTO status_order
 VALUES (4, 'filling');
+
+INSERT INTO status_product
+VALUES (1, 'in stock');
+INSERT INTO status_product
+VALUES (2, 'coming soon');
+INSERT INTO status_product
+VALUES (3, 'out of stock');
+
+INSERT INTO status_category
+VALUES (1, 'active');
+INSERT INTO status_category
+VALUES (2, 'no active');
+

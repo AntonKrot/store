@@ -32,7 +32,7 @@ public class Order {
     private User user;
     @ManyToOne
     @JoinColumn(name = "status_id")
-    private Status status;
+    private OrderStatus status;
 
     public Double getTotalPrice() {
         return totalPrice;
@@ -70,11 +70,11 @@ public class Order {
         this.phone = phone;
     }
 
-    public Status getStatus() {
+    public OrderStatus getStatus() {
         return status;
     }
 
-    public void setStatus(Status status) {
+    public void setStatus(OrderStatus status) {
         this.status = status;
     }
 

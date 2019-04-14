@@ -1,12 +1,10 @@
-<%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core" %>
-<%@ taglib prefix="spring" uri="http://www.springframework.org/tags" %>
 <%@ taglib prefix="form" uri="http://www.springframework.org/tags/form" %>
+<%@ taglib prefix="spring" uri="http://www.springframework.org/tags" %>
+<%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core" %>
+<%@ taglib prefix="from" uri="http://www.springframework.org/tags/form" %>
+<%@ taglib prefix="th" uri="http://www.springframework.org/tags/form" %>
 <%@ page contentType="text/html;charset=UTF-8" language="java" %>
-
-<c:set var="contextPath" value="${pageContext.request.contextPath}"/>
-
-<!DOCTYPE html>
-<html lang="en">
+<html>
 <head>
     <title>All product</title>
 </head>
@@ -35,8 +33,8 @@
                 <td>${list.description}</td>
                 <td>${list.price}</td>
                 <td>${list.producer}</td>
-                <td><img src="/shop/product/imageDisplay?id=${list.id}" class="picture" width="200" height="200" /></td>
-                <td><a href="/shop/basket/add/${list.id}" class="btn btn-outline-primary">Basket</a></td>
+                <td><img src="/shop/product/imageDisplay?id=${list.id}" class="picture" width="200" height="200"/></td>
+                <td><a href="/shop/product/edit/${list.id}" class="btn btn-outline-primary">Edit</a></td>
             </tr>
         </c:forEach>
         </tbody>
@@ -44,5 +42,6 @@
 
     <a href="/shop/welcome" class="btn btn-outline-secondary">Back</a>
 </div>
+
 </body>
 </html>
