@@ -11,7 +11,6 @@
 </head>
 
 <jsp:include page=".jsp"/>
-<jsp:include page="sideBar.jsp"/>
 <jsp:include page="navBar.jsp"/>
 
 <body>
@@ -19,7 +18,7 @@
     <div class="container">
         <div class="container  jumbotron">
             <h1 class="text-center">No orders!</h1>
-            <a href="/shop/welcome" class="btn btn-outline-secondary">Back</a>
+            <a href="/shop/admin" class="btn btn-outline-secondary">Back</a>
         </div>
     </div>
 </div>

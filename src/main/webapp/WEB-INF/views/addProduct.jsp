@@ -15,7 +15,6 @@
 <body>
 
 <jsp:include page=".jsp"/>
-<jsp:include page="sideBar.jsp"/>
 <jsp:include page="navBar.jsp"/>
 
 <div class="container">
@@ -30,21 +29,21 @@
             <label class="custom-file-label" for="file">Choose file</label>
         </div>
 
-        <select name="idProducer" id="producer" class="custom-select">
+        <select name="idProducer" id="producer" class="custom-select my-3">
             <option selected>Choose a producer</option>
             <c:forEach items="${producers}" var="producer">
                 <option value="${producer.id}">${producer.name}</option>
             </c:forEach>
         </select>
 
-        <select name="idStatus" id="status" class="custom-select">
+        <select name="idStatus" id="status" class="custom-select my">
             <option selected>Choose a status</option>
             <c:forEach items="${status}" var="status">
                 <option value="${status.id}">${status.name}</option>
             </c:forEach>
         </select>
 
-        <select name="idCategory" id="category" class="custom-select">
+        <select name="idCategory" id="category" class="custom-select my-2">
             <option selected>Choose a category</option>
             <c:forEach items="${categories}" var="category">
                 <option value="${category.id}">${category.name}</option>
@@ -70,7 +69,7 @@
 
         <div>
             <button onclick="document.forms['createForm'].submit()" class="btn btn-primary">Confirm</button>
-            <a href="/shop/welcome" class="btn btn-outline-secondary">Back</a>
+            <a href="/shop/product/all" class="btn btn-outline-secondary">Back</a>
         </div>
 
     </form:form>

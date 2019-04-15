@@ -12,7 +12,6 @@
 <body>
 
 <jsp:include page=".jsp"/>
-<jsp:include page="sideBar.jsp"/>
 <jsp:include page="navBar.jsp"/>
 
 <div class="container my-4">

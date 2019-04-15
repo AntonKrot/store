@@ -99,15 +99,16 @@ public class UserController {
     }
 
     @RequestMapping(value = "/update/{id}", method = GET)
-    public String updateUserById(@PathVariable("id") Long id, Model model) {
+    public String updateUserById(@PathVariable("id") Long id, Model model, @RequestParam("path") String path) {
         model.addAttribute("user", userService.findById(id));
+        model.addAttribute("path", path);
         return "editUser";
     }
 
     @RequestMapping(value = "/update", method = POST)
-    public String update(@ModelAttribute("user") User user) {
+    public String update(@ModelAttribute("user") User user, @RequestParam("path") String path) {
         userService.updateUser(user);
-        return "redirect:/welcome";
+        return "redirect:" + path;
     }
 
     @RequestMapping(value = "/role/{id}", method = GET)

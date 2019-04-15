@@ -34,7 +34,7 @@ public class CategoryController {
     String addCategory(@ModelAttribute("category") Category category, @RequestParam("idStatus") Long idStatus) {
         category.setStatus(categoryStatusService.findStatusById(idStatus));
         categoryService.addCategory(category);
-        return "redirect:/welcome";
+        return "redirect:/category/all";
     }
 
     @RequestMapping(value = "/edit/{id}", method = GET)
@@ -45,10 +45,16 @@ public class CategoryController {
     }
 
     @RequestMapping(value = "/edit", method = POST)
-    String editCategoiry(@ModelAttribute("category") Category category,  @RequestParam("idStatus") Long idStatus) {
+    String editCategoiry(@ModelAttribute("category") Category category, @RequestParam("idStatus") Long idStatus) {
         category.setStatus(categoryStatusService.findStatusById(idStatus));
         categoryService.updateCategory(category);
-        return "redirect:/welcome";
+        return "redirect:/category/all";
+    }
+
+    @RequestMapping(value = "/all", method = GET)
+    String showAllCategory(Model model) {
+        model.addAttribute("categories", categoryService.findAllCategory());
+        return "showAllCategories";
     }
 
 }

@@ -10056,30 +10056,47 @@ img.picture:hover {
 
 /* The sidebar menu */
 .sidenav {
-  height: 100%; /* Full-height: remove this if you want "auto" height */
-  width: 10%; /* Set the width of the sidebar */
+  height: auto; /* Full-height: remove this if you want "auto" height */
+  width: auto; /* Set the width of the sidebar */
+  min-width: 10%;
   position: fixed; /* Fixed Sidebar (stay in place on scroll) */
   z-index: 1; /* Stay on top */
-  top: 5%; /* Stay at the top */
-  left: 6.8%;
-  background-color: #343a40; /* Black */
+  top: 15%; /* Stay at the top */
+  left: 4em;
+  background-color: #f8f9fa; /* Bootstrap light */
   overflow-x: hidden; /* Disable horizontal scroll */
-  padding-top: 20px;
+  border-radius: 10px;
+  padding-top: 5px;
+  padding-bottom: 5px;
 }
 
 /* The navigation menu links */
-.sidenav a {
+.sidenav a, .sidenav button {
   padding: 6px 8px 6px 16px;
   text-decoration: none;
   font-size: 25px;
-  color: #fff;
+  color: #212529;
   display: block;
   text-align: center;
 }
 
+@keyframes sidebarLinkHover {
+  from {
+    background-color: #f8f9fa;
+    color: #212529;
+  }
+  to {
+    background-color: #212529;
+    color: #f1f1f1;
+  }
+}
+
 /* When you mouse over the navigation links, change their color */
-.sidenav a:hover {
+.sidenav a:hover, .sidenav button:hover {
+  animation-name: sidebarLinkHover;
+  animation-duration: 0.3s;
   color: #f1f1f1;
+  background-color: #212529;
 }
 
 /* Style page content */

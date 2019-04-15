@@ -7,14 +7,22 @@
 		http://www.springframework.org/schema/security
 		http://www.springframework.org/schema/security/spring-security.xsd">
 
-    <http auto-config="true" >
+    <http auto-config="true">
         <intercept-url pattern="/" access="hasAnyRole('ROLE_USER', 'ROLE_ADMIN')"/>
         <intercept-url pattern="/welcome" access="hasAnyRole('ROLE_USER', 'ROLE_ADMIN')"/>
         <intercept-url pattern="/update/*" access="hasAnyRole('ROLE_USER', 'ROLE_ADMIN')"/>
+        <intercept-url pattern="/setting/" access="hasAnyRole('ROLE_USER', 'ROLE_ADMIN')"/>
+        <intercept-url pattern="/product/category/*" access="hasAnyRole('ROLE_USER', 'ROLE_ADMIN')"/>
         <intercept-url pattern="/admin" access="hasRole('ROLE_ADMIN')"/>
         <intercept-url pattern="/role/*" access="hasRole('ROLE_ADMIN')"/>
         <intercept-url pattern="/users" access="hasRole('ROLE_ADMIN')"/>
-        <intercept-url pattern="product/add" access="hasRole('ROLE_ADMIN')"/>
+        <intercept-url pattern="/product/add" access="hasRole('ROLE_ADMIN')"/>
+        <intercept-url pattern="/product/all" access="hasRole('ROLE_ADMIN')"/>
+        <intercept-url pattern="/product/edit/*" access="hasRole('ROLE_ADMIN')"/>
+        <intercept-url pattern="/producer/*" access="hasRole('ROLE_ADMIN')"/>
+        <intercept-url pattern="/category/*" access="hasRole('ROLE_ADMIN')"/>
+        <intercept-url pattern="/delete/*" access="hasRole('ROLE_ADMIN')"/>
+        <intercept-url pattern="/user/*" access="hasRole('ROLE_ADMIN')"/>
         <csrf disabled="true"/>
         <form-login login-page="/login" default-target-url="/welcome" authentication-failure-url="/login?error"
                     username-parameter="username" password-parameter="password"/>
@@ -27,6 +35,7 @@
             <password-encoder ref="encoder"></password-encoder>
         </authentication-provider>
     </authentication-manager>
+
 
     <beans:bean id="userDetailsServiceImpl"
                 class="by.krot.mvc.service.impl.UserDetailsServiceImpl"></beans:bean>

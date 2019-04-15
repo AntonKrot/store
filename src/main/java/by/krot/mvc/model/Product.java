@@ -4,6 +4,7 @@ package by.krot.mvc.model;
 import javax.persistence.*;
 
 import java.util.Arrays;
+import java.util.Objects;
 import java.util.Set;
 
 import static javax.persistence.GenerationType.AUTO;
@@ -34,7 +35,7 @@ public class Product {
     @ManyToOne
     @JoinColumn(name = "producer_id", nullable = false)
     private Producer producer;
-    @ManyToMany
+    @ManyToMany(mappedBy = "products")
     private Set<Order> orders;
 
     public ProductStatus getStatus() {
@@ -108,6 +109,7 @@ public class Product {
     public void setProducer(Producer producer) {
         this.producer = producer;
     }
+
 
     @Override
     public String toString() {

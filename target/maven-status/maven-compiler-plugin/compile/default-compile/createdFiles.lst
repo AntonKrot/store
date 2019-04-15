@@ -30,6 +30,7 @@ by\krot\mvc\model\Category.class
 by\krot\mvc\dao\RoleDao.class
 by\krot\mvc\dao\OrderStatusDao.class
 by\krot\mvc\model\Order.class
+by\krot\mvc\controller\SettingController.class
 by\krot\mvc\model\Product.class
 by\krot\mvc\service\impl\UserDetailsServiceImpl.class
 by\krot\mvc\dao\ProducerDao.class

@@ -7,7 +7,6 @@
 <body>
 
 <jsp:include page=".jsp"/>
-<jsp:include page="sideBar.jsp"/>
 <jsp:include page="navBar.jsp"/>
 
 <div class="container">
@@ -30,11 +29,10 @@
             </c:forEach>
         </select>
 
-        <div>
+        <div class="my-2">
             <button onclick="document.forms['updateForm'].submit()" class="btn btn-primary">Confirm</button>
-            <a href="/shop/welcome" class="btn btn-outline-secondary">Back</a>
+            <a href="/shop/category/all" class="btn btn-outline-secondary">Back</a>
         </div>
-
     </form>
 </div>
 

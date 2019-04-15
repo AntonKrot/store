@@ -10,16 +10,36 @@
 </head>
 
 <jsp:include page=".jsp"/>
+<jsp:include page="navBar.jsp"/>
 
 <body>
 <div class="container">
-    <c:if test="${pageContext.request.userPrincipal.name != null}">
-        <form id="logoutForm" method="post" action="${contextPath}/logout">
-            <input type="hidden" name="${_csrf.parameterName}" value="${_csrf.token}"/>
-        </form>
-        <h2>Admin Page ${pageContext.request.userPrincipal.name} | <a onclick="document.forms['logoutForm'].submit()">Logout</a>
-        </h2>
-    </c:if>
+
+    <table class="table table-bordered text-center">
+        <thead class="thead-dark">
+        <tr>
+            <th scope="col">Options</th>
+        </tr>
+        </thead>
+        <tbody>
+        <tr>
+            <td><a href="/shop/users">Show users</a></td>
+        </tr>
+        <tr>
+            <td><a href="/shop/basket/orders">Show orders</a></td>
+        </tr>
+        <tr>
+            <td><a href="/shop/producer/all">Show producers</a></td>
+        </tr>
+        <tr>
+            <td><a href="/shop/category/all">Show categories</a></td>
+        </tr>
+        <tr>
+            <td><a href="/shop/product/all">Show products</a></td>
+        </tr>
+        </tbody>
+    </table>
+    <a href="/shop/welcome/" class="btn btn-outline-secondary ">Back</a>
 </div>
 </body>
 </html>

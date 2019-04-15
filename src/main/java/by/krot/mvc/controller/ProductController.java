@@ -1,6 +1,5 @@
 package by.krot.mvc.controller;
 
-import by.krot.mvc.model.Producer;
 import by.krot.mvc.model.Product;
 import by.krot.mvc.service.*;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -13,7 +12,6 @@ import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 import java.io.*;
 import java.util.List;
-import java.util.Set;
 
 import static org.springframework.web.bind.annotation.RequestMethod.GET;
 import static org.springframework.web.bind.annotation.RequestMethod.POST;
@@ -70,7 +68,7 @@ public class ProductController {
     String addProduct(@ModelAttribute("product") Product product, @RequestParam("idProducer") Long idProducer,
                       @RequestParam("idCategory") Long idCategory, @RequestParam("idStatus") Long idStatus, @RequestParam("file") MultipartFile file) {
         productService.addProduct(productService.getProduct(product, idStatus, idCategory, idProducer, file));
-        return "redirect:/welcome";
+        return "redirect:/product/all";
     }
 
     @RequestMapping(value = "/all", method = GET)

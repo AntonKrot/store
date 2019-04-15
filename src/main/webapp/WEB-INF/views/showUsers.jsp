@@ -8,13 +8,12 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <title>Create an account</title>
+    <title>Users</title>
 </head>
 
 <body>
 
 <jsp:include page=".jsp"/>
-<jsp:include page="sideBar.jsp"/>
 <jsp:include page="navBar.jsp"/>
 
 <div class="container">
@@ -38,10 +37,17 @@
                         <input type="hidden" name="path" value="/shop/users"/>
                     </form>
                     <a onclick="document.forms['informationAboutUser'].submit()">${list.id}</a>
-                    </th>
+                </th>
                 <td>${list.username}</td>
                 <td><a href="/shop/basket/story/${list.id}" class="btn btn-outline-info">Order story</a></td>
-                <td><a href="update/${list.id}" class="btn btn-outline-info">Update</a></td>
+
+                <td>
+                    <form id="updateForm" method="GET" action="/shop/update/${list.id}/">
+                        <input type="hidden" name="path" value="/shop/users"/>
+                    </form>
+                    <a onclick="document.forms['updateForm'].submit()" class="btn btn-outline-info">Update</a>
+                </td>
+
                 <td><a href="delete/${list.id}" class="btn btn-outline-danger">Delete</a></td>
                 <td><a href="role/${list.id}" class="btn btn-outline-primary">Add role</a>
                 </td>

@@ -13,7 +13,6 @@
 <body>
 
 <jsp:include page=".jsp"/>
-<jsp:include page="sideBar.jsp"/>
 <jsp:include page="navBar.jsp"/>
 
 
@@ -48,15 +47,17 @@
                         <input type="hidden" name="path" value="/shop/basket/orders"/>
                     </form>
                     <a onclick="document.forms['story'].submit()" class="btn btn-outline-success">More</a>
-
                     <a href="/shop/basket/accept/order/${order.id}" class="btn btn-outline-primary">Accept</a>
-                    <a href="/shop/basket/cancel/order/${order.id}" class="btn btn-outline-danger">Cancel</a>
+                    <form id="cancelOrder" method="GET" action="/shop/basket/cancel/order/${order.id}">
+                        <input type="hidden" name="path" value="/basket/orders"/>
+                    </form>
+                    <a onclick="document.forms['cancelOrder'].submit() " class="btn btn-outline-danger my-1">Cancel</a>
                 </td>
             </c:forEach>
         </tr>
         </tbody>
     </table>
-    <a href="/shop/welcome" class="btn btn-outline-secondary">Back</a>
+    <a href="/shop/admin" class="btn btn-outline-secondary">Back</a>
 </div>
 </body>
 </html>

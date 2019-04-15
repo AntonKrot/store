@@ -1,6 +1,7 @@
 package by.krot.mvc.controller;
 
 import by.krot.mvc.model.Order;
+import by.krot.mvc.model.Producer;
 import by.krot.mvc.model.Product;
 import by.krot.mvc.service.*;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -47,7 +48,7 @@ public class OrderController {
     OrderStatusService orderStatusService;
 
     @RequestMapping(value = "add/{id}", method = GET)
-    String addToOrder(@PathVariable("id") Long id) {
+    String addToOrder(@PathVariable("id") Long id, @RequestParam("path") String path) {
         Order order = orderService.findOrderByStatusAndUserId(4L, securityService.getCurrentUserId());
         if (order != null) {
             Product product = productService.findProductById(id);
@@ -68,7 +69,7 @@ public class OrderController {
             orderStatusService.findStatusById(4L).getOrders().add(order);
             orderService.addOrder(order);
         }
-        return "redirect:/welcome";
+        return "redirect:" + path;
     }
 
     @RequestMapping(value = "/", method = GET)
@@ -122,11 +123,11 @@ public class OrderController {
     }
 
     @RequestMapping(value = "/cancel/order/{id}", method = GET)
-    String cancelOrder(@PathVariable("id") Long id) {
+    String cancelOrder(@PathVariable("id") Long id, @RequestParam("path")String path) {
         Order order = orderService.findOrderById(id);
         order.setStatus(orderStatusService.findStatusById(3L));
         orderService.updateOrder(order);
-        return "redirect:/basket/orders";
+        return "redirect:" + path;
     }
 
     @RequestMapping(value = "/order/{id}", method = GET)

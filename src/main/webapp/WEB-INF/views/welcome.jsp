@@ -11,67 +11,37 @@
 <body>
 
 <jsp:include page=".jsp"/>
-<jsp:include page="sideBar.jsp"/>
 <jsp:include page="navBar.jsp"/>
 
-<div class="container">
+<style>
+    h1 {
+        font-family: 'Times New Roman', Times, serif;
+        font-size: 250%;
+    }
+    p {
+        font-family: Verdana, Arial, Helvetica, sans-serif;
+        font-size: 25pt;
+    }
+</style>
 
-    <c:if test="${pageContext.request.userPrincipal.name != null}">
-        <form id="logoutForm" method="POST" action="${contextPath}/logout">
-            <input type="hidden" name="${_csrf.parameterName}" value="${_csrf.token}"/>
-        </form>
-        <form id="users" method="GET" action="${contextPath}/users">
-            <input type="hidden" name="${_csrf.parameterName}" value="${_csrf.token}"/>
-        </form>
-        <form id="basket" method="GET" action="/shop/basket/">
-            <input type="hidden" name="${_csrf.parameterName}" value="${_csrf.token}"/>
-        </form>
-        <form id="addProduct" method="GET" action="${contextPath}/product/add">
-            <input type="hidden" name="${_csrf.parameterName}" value="${_csrf.token}"/>
-        </form>
-        <form id="addCategory" method="GET" action="/shop/category/add">
-            <input type="hidden" name="${_csrf.parameterName}" value="${_csrf.token}"/>
-        </form>
-        <form id="showOrders" method="GET" action="/shop/basket/orders">
-            <input type="hidden" name="${_csrf.parameterName}" value="${_csrf.token}"/>
-        </form>
-        <form id="showProducers" method="GET" action="/shop/producer/all">
-            <input type="hidden" name="${_csrf.parameterName}" value="${_csrf.token}"/>
-        </form>
-        <form id="addProducer" method="GET" action="/shop/producer/add">
-            <input type="hidden" name="${_csrf.parameterName}" value="${_csrf.token}"/>
-        </form>
-        <form id="showProduct" method="GET" action="/shop/product/all">
-            <input type="hidden" name="${_csrf.parameterName}" value="${_csrf.token}"/>
-        </form>
-        <h2>Welcome ${pageContext.request.userPrincipal.name} | <a onclick="document.forms['logoutForm'].submit()"
-                                                                   class="btn btn-outline-info">Logout</a>
-            <a onclick="document.forms['addProducer'].submit()" class="btn btn-outline-info">Add producer</a>
-            <a onclick="document.forms['addProduct'].submit()" class="btn btn-outline-info">Add product</a>
-            <a onclick="document.forms['addCategory'].submit()" class="btn btn-outline-info">Add category</a>
-            <a onclick="document.forms['users'].submit()" class="btn btn-outline-info">Show users</a>
-            <a onclick="document.forms['showProduct'].submit()" class="btn btn-outline-info">Show all products</a>
-            <a onclick="document.forms['basket'].submit()" class="btn btn-outline-info">Show basket</a>
-            <a onclick="document.forms['showOrders'].submit()" class="btn btn-outline-info">Show orders</a>
-            <a onclick="document.forms['showProducers'].submit()" class="btn btn-outline-info">Show producer</a>
-        </h2>
-    </c:if>
+<div class="container"
+<c:if test="${pageContext.request.userPrincipal.name != null}">
+    <h1><strong><p class="text-center">Welcome ${pageContext.request.userPrincipal.name}</p></strong></h1>
+</c:if>
 
 </div>
 
-<div class="container">
+<div class="container my-2">
     <table class="table table-bordered text-center">
         <thead class="thead-dark">
         <tr>
             <th scope="col">Categories</th>
-            <th scope="col"></th>
         </tr>
         </thead>
         <tbody>
         <c:forEach var="list" items="${categories}">
             <tr>
-                <td><a href="product/category/${list.id}">${list.name}</a></td>
-                <td><a href="/shop/category/edit/${list.id}">Edit</a></td>
+                <td><a href="/shop/product/category/${list.id}">${list.name}</a></td>
             </tr>
         </c:forEach>
         </tbody>

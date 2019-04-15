@@ -38,7 +38,7 @@ public class ProducerController {
     @RequestMapping(value = "/add", method = POST)
     String addProducer(@ModelAttribute("producer") Producer producer) {
         producerService.addProducer(producer);
-        return "redirect:/welcome";
+        return "redirect:/producer/all";
     }
 
     @RequestMapping(value = "/edit/{id}", method = GET)
@@ -50,19 +50,13 @@ public class ProducerController {
     @RequestMapping(value = "/edit", method = POST)
     String editProducer(@ModelAttribute("producer") Producer producer) {
         producerService.updateProducer(producer);
-        return "redirect:/welcome";
+        return "redirect://producer/all";
     }
 
     @RequestMapping(value = "/all", method = GET)
     String allProducers(Model model) {
         model.addAttribute("producers", producerService.findAllProducers());
         return "showProducers";
-    }
-
-    @RequestMapping(value = "/delete/{id}", method = GET)
-    String deleteProducer(@PathVariable("id") Long id) {
-        producerService.deleteProducerById(id);
-        return "redirect:/welcome";
     }
 
 }

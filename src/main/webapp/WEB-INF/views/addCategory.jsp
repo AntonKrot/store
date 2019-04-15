@@ -10,7 +10,6 @@
 <body>
 
 <jsp:include page=".jsp"/>
-<jsp:include page="sideBar.jsp"/>
 <jsp:include page="navBar.jsp"/>
 
 <div class="container">
@@ -34,7 +33,7 @@
             </c:forEach>
         </select>
 
-        <div>
+        <div class="my-2">
             <button type="submit" class="btn btn-primary">Add category</button>
             <a href="/shop/welcome" class="btn btn-outline-secondary">Back</a>
         </div>

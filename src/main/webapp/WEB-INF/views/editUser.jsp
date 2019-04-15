@@ -11,7 +11,6 @@
 <body>
 
 <jsp:include page=".jsp"/>
-<jsp:include page="sideBar.jsp"/>
 <jsp:include page="navBar.jsp"/>
 
 <div class="container">
@@ -20,6 +19,8 @@
 
         <h2 class="form-heading text-center mt-2 mb-4">Edit your account</h2>
         <input type="hidden" title="id" type="text" name="id" value="${user.id}"/>
+
+        <input type="hidden" name="path" value="/shop/users"/>
 
         <div class="form-group ${error != null ? 'has-error' : ''}">
             <label for="username">Username</label>
@@ -59,7 +60,7 @@
         </div>
         <div>
             <button onclick="document.forms['updateForm'].submit()" class="btn btn-primary">Confirm</button>
-            <a href="/shop/welcome" class="btn btn-outline-secondary">Back</a>
+            <a href="${path}" class="btn btn-outline-secondary">Back</a>
         </div>
     </form>
 

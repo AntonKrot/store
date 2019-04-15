@@ -12,14 +12,12 @@
 <body>
 
 <jsp:include page=".jsp"/>
-<jsp:include page="sideBar.jsp"/>
 <jsp:include page="navBar.jsp"/>
 <div class="container">
-    <table class="table table-bordered text-center">
+    <table class="table  text-center">
         <thead class="thead-dark">
         <tr>
             <th scope="col">name</th>
-            <th scope="col"></th>
             <th scope="col"></th>
         </tr>
         </thead>
@@ -28,13 +26,14 @@
             <tr>
                 <td>${list.name}</td>
                 <td><a href="/shop/producer/edit/${list.id}" class="btn btn-outline-primary">Edit</a></td>
-                <td><a href="/shop/producer/delete/${list.id}" class="btn btn-outline-danger">Delete</a></td>
             </tr>
         </c:forEach>
         </tbody>
     </table>
-
-    <a href="/shop/welcome" class="btn btn-outline-secondary">Back</a>
+<div>
+    <a href="/shop/producer/add" class="btn btn-outline-primary">Add producer</a>
+    <a href="/shop/admin" class="btn btn-outline-secondary">Back</a>
+</div>
 </div>
 </body>
 </html>

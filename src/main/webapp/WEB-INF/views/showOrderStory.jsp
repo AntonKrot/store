@@ -7,7 +7,6 @@
 <body>
 
 <jsp:include page=".jsp"/>
-<jsp:include page="sideBar.jsp"/>
 <jsp:include page="navBar.jsp"/>
 
 <div class="container">
@@ -21,7 +20,7 @@
             <th scope="col">Total price</th>
             <th scope="col">Comment</th>
             <th scope="col">Status</th>
-            <th scope="col">Status</th>
+            <th scope="col"></th>
         </tr>
         </thead>
         <tbody>
@@ -52,7 +51,7 @@
         </tbody>
     </table>
 
-    <a href="/shop/welcome" class="btn btn-outline-secondary">Back</a>
+    <a href="/shop/users" class="btn btn-outline-secondary">Back</a>
 </div>
 
 </body>
